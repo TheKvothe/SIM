@@ -1,5 +1,5 @@
 # SIM
 
-  * Roberto Uroz
+  * Roberto
   * Arthur Bernal
   * Agusti Salamero
