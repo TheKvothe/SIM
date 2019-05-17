@@ -42,10 +42,10 @@ class Esdeveniment:
         return txt
 #--------------------------------------------------------------------------------------------------------------------------
     def arribadaCamio(self):
-		tip=["ARRIBADA","FISERVEI"]
-		nom=self.element.name()
-		txt="	"+tip[self.tipus]+" del  "+nom+" a les "+str(self.timestamp)
-		return txt
+        tip=["ARRIBADA","FISERVEI"]
+        nom=self.element.name()
+        txt="	"+tip[self.tipus]+" del  "+nom+" a les "+str(self.timestamp)
+        return txt
 
     def enviarMainGate(self, numGate):
         tip = ["ARRIBADA", "FISERVEI"]
@@ -66,6 +66,3 @@ class Esdeveniment:
         tip = ["ARRIBADA", "FISERVEI"]
         nom = self.element.name()
         txt = " " + tip[self.tipus] + " de la posicio del parking " +  str(posParking) + " del camio a l'hora " +  str(self.timestamp)
-
-    def esperantMainGater(self):
-        
