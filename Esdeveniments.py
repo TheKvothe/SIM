@@ -42,7 +42,7 @@ class Esdeveniment:
         return txt
 #--------------------------------------------------------------------------------------------------------------------------
     def arribadaCamio(self):
-        tip=["ARRIBADA","FISERVEI"]
+        tip=["ARRIBADA AL MAINGATE","FISERVEI MAINGATE", ""]
         nom=self.element.name()
         txt="	"+tip[self.tipus]+" del  "+nom+" a les "+str(self.timestamp)
         return txt
