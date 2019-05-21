@@ -26,28 +26,20 @@ class Motor:
 	darrerServei = 0
 
 	generador = None
-	mainGate1= None
-	mainGate2= None
-	mainGate3= None
-	mainGate4= None
-	mainGate5= None
-	mainGate6= None
-	mainGate7= None
-	mainGate8= None
-	cua = 0
+	Parking = []
+	MainGate = []
+	cuaMainGate = 0
+	cuaParking = 0
 	traza = []
 
 	def __init__(self):
 		self.generador = Source(1)
-		self.cua = 0
-		self.mainGate1 = MainGate(0)
-		self.mainGate2 = MainGate(1)
-		self.mainGate3 = MainGate(2)
-		self.mainGate4 = MainGate(3)
-		self.mainGate5 = MainGate(4)
-		self.mainGate6 = MainGate(5)
-		self.mainGate7 = MainGate(6)
-		self.mainGate8 = MainGate(7)
+		self.cuaMainGate = 0
+		self.cuaParking = 0
+		for i in range(0,8):
+			self.MainGate[i] = MainGate(i)
+		for i in range(0,100):
+			self.Parking[i] = PosicioParking(i)
 		self.esdevenimentsPendents = []
 		self.esdevenimentsProcessats = []
 		self.currentTime = 0
@@ -70,66 +62,73 @@ class Motor:
 
 	def tractarEsdeveniment(self, esdeveniment):
 		self.currentTime = esdeveniment.timestamp
-
 		self.traza.append(esdeveniment.arribadaCamio())
-		if esdeveniment.tipus == constants.EV_ARRIVAL:
+		if esdeveniment.tipus == constants.EV_ARRIVAL_MAINGATE:
 			nextTime = self.generador.nextArrival()
 			if nextTime >= 0:
 				nextTime += self.currentTime
-				esd = Esdeveniment(nextTime, constants.EV_ARRIVAL, self.generador)
+				esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador)
 				self.esdevenimentsPendents.append(esd)
 				self.traza.append(esd.programat())
-			if self.mainGate1.isFree():
-				# nextTime-> determinar tiempo SEGUN si hay sitio o no
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate1.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate1)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate2.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate2.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate2)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate3.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate3.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate3)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate4.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate4.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate4)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate5.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate5.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate5)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate6.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate6.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate6)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate7.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate7.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate7)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
-			elif self.mainGate8.isFree():
-				nextTime = self.currentTime
-				self.traza.append(self.mainGate8.iniciMaingate(self.currentTime))
-				esd1 = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.mainGate8)
-				self.esdevenimentsPendents.append(esd1)
-				self.traza.append(esd1.esperantMainGate())
+			foundMainGate = False
+			for i in range(0,8):
+				if foundMainGate:
+					if self.MainGate[i].isFree():
+						foundMainGate = True
+						foundParking = False
+						for x in range(0,100):
+							if self.Parking[x].isFree():
+								foundParking = True
+								# nextTime-> determinar tiempo SEGUN si hay sitio o no
+								nextTime = self.currentTime
+								self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
+								esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i])
+								self.esdevenimentsPendents.append(esd1)
+								self.traza.append(esd1.esperantMainGate())
 
-			# elifs de 8 maingates
-			else:
-				self.cua += 1
-				self.traza.append(esdeveniment.encuar(self.cua)) 
+								#hay que ver como hacemos lo de la traza
+								esd2 = Esdeveniment(nextTime, constants.EV_ARRIVAL_PARKING, self.Parking[x])
+								self.esdevenimentsPendents.append(esd2)
+								self.traza.append(esd2.esperantMainGate())
+								break
+							else:
+								self.cuaParking += 1
+								self.traza.append(esdeveniment.encuar(self.cuaParking))
+								#tocar algo de la traza
+						break
+					else:
+						self.cuaMainGate += 1
+						self.traza.append(esdeveniment.encuar(self.cuaMainGate))
+
+		elif esdeveniment.tipus == constants.EV_ENDSERVICE_MAINGATE:
+			esdeveniment.element.Free()
+            if self.cua>0:
+                self.cua-=1
+                nextTime=esdeveniment.element.nextEndService()
+                nextTime+=self.currentTime
+                self.traza.append(esdeveniment.element.iniciMaingate(self.currentTime))
+                esd3=Esdeveniment(nextTime,constants.EV_ENDSERVICE,esdeveniment.element)
+                self.esdevenimentsPendents.append(esd3)
+                self.traza.append(esd3.programat())
+
+				foundParking = False
+				for x in range(0,100):
+					if self.Parking[x].isFree():
+						foundParking = True
+						# nextTime-> determinar tiempo SEGUN si hay sitio o no
+						nextTime = self.currentTime
+						self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
+						esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i])
+						self.esdevenimentsPendents.append(esd1)
+						self.traza.append(esd1.esperantMainGate())
+
+						#hay que ver como hacemos lo de la traza
+						esd2 = Esdeveniment(nextTime, constants.EV_ARRIVAL_PARKING, self.Parking[x])
+						self.esdevenimentsPendents.append(esd2)
+						self.traza.append(esd2.esperantMainGate())
+						break
+					else:
+						self.cuaParking += 1
+						self.traza.append(esdeveniment.encuar(self.cuaParking))
+						#tocar algo de la traza
+        self.esdevenimentsPendents.sort()
