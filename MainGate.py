@@ -1,11 +1,14 @@
 class MainGate:
 
-    ocupado = None
+    libre = None
     num = None
 
     def __init__(self, data):
-        ocupado = False
+        self.libre = True
         self.num = data
 
     def iniciMaingate (self, data):
         data
+
+    def isFree(self):
+        return self.libre

@@ -13,6 +13,9 @@ class Source:
             print("TODO")
 
     def nextArrival(self):
-        result = self.sources.item[-1]
+        result = self.sources[0]
         self.sources.pop()
         return result
+
+    def name(self):
+        return str(self.sources[0])

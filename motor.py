@@ -80,6 +80,8 @@ class Motor:
 				self.esdevenimentsPendents.append(esd)
 				self.traza.append(esd.programat())
 			if self.mainGate1.isFree():
+				print("jojos")
+
 				# nextTime-> determinar tiempo SEGUN si hay sitio o no
 				nextTime = self.currentTime
 				self.traza.append(self.mainGate1.iniciMaingate(self.currentTime))
