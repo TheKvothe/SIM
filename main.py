@@ -1,12 +1,13 @@
-import Motor
+from motor import Motor
+
 
 def main(args):
-    return 0
+	return 0
+
 
 if __name__ == '__main__':
 	import sys
 
-
-	motor=Motor()
+	motor = Motor()
 	motor.run()
 	print(motor.esdevenimentsProcessats)

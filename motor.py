@@ -3,6 +3,7 @@ from MainGate import MainGate
 from Esdeveniments import Esdeveniment
 import constants
 
+
 class Motor:
 	"""
     Motor de simulacio,
@@ -50,7 +51,6 @@ class Motor:
 		esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL, self.generador)
 		self.esdevenimentsPendents.append(esd)
 		self.traza.append(esd.programat())
-		self.cua = 0
 
 	def run(self):
 		continuar = True
@@ -71,64 +71,57 @@ class Motor:
 				self.esdevenimentsPendents.append(esd)
 				self.traza.append(esd.programat())
 			foundMainGate = False
-			for i in range(0,8):
-				if foundMainGate:
-					if self.MainGate[i].isFree():
-						foundMainGate = True
-						foundParking = False
-						for x in range(0,100):
-							if self.Parking[x].isFree():
-								foundParking = True
-								# nextTime-> determinar tiempo SEGUN si hay sitio o no
-								nextTime = self.currentTime
-								self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
-								esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i])
-								self.esdevenimentsPendents.append(esd1)
-								self.traza.append(esd1.esperantMainGate())
+			for i in range(0, 8):
+				if self.MainGate[i].isFree():
+					foundMainGate = True
+					foundParking = False
+					for x in range(0, 100):
+						if self.Parking[x].isFree():
+							foundParking = True
+							# nextTime-> determinar tiempo SEGUN si hay sitio o no
+							nextTime = self.currentTime
+							self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
+							esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i])
+							self.esdevenimentsPendents.append(esd1)
+							self.traza.append(esd1.esperantMainGate())
 
-								#hay que ver como hacemos lo de la traza
-								esd2 = Esdeveniment(nextTime, constants.EV_ARRIVAL_PARKING, self.Parking[x])
-								self.esdevenimentsPendents.append(esd2)
-								self.traza.append(esd2.esperantMainGate())
-								break
-							else:
-								self.cuaParking += 1
-								self.traza.append(esdeveniment.encuar(self.cuaParking))
-								#tocar algo de la traza
-						break
-					else:
-						self.cuaMainGate += 1
-						self.traza.append(esdeveniment.encuar(self.cuaMainGate))
+							# hay que ver como hacemos lo de la traza del parking
+							esd2 = Esdeveniment(nextTime, constants.EV_ARRIVAL_PARKING, self.Parking[x])
+							self.esdevenimentsPendents.append(esd2)
+							self.traza.append(esd2.esperantMainGate())
+							break
+					if not foundParking:
+						self.cuaParking += 1
+						self.traza.append(esdeveniment.encuar(self.cuaParking))
+						# tocar algo de la traza
+					break
+			if not foundMainGate:
+				self.cuaMainGate += 1
+				self.traza.append(esdeveniment.encuar(self.cuaMainGate))
 
 		elif esdeveniment.tipus == constants.EV_ENDSERVICE_MAINGATE:
 			esdeveniment.element.Free()
-            if self.cua>0:
-                self.cua-=1
-                nextTime=esdeveniment.element.nextEndService()
-                nextTime+=self.currentTime
-                self.traza.append(esdeveniment.element.iniciMaingate(self.currentTime))
-                esd3=Esdeveniment(nextTime,constants.EV_ENDSERVICE,esdeveniment.element)
-                self.esdevenimentsPendents.append(esd3)
-                self.traza.append(esd3.programat())
-
+			if self.cua > 0:
+				self.cua -= 1
 				foundParking = False
-				for x in range(0,100):
+				for x in range(0, 100):
 					if self.Parking[x].isFree():
-						foundParking = True
-						# nextTime-> determinar tiempo SEGUN si hay sitio o no
+						foundParking = True			# nextTime-> determinar tiempo SEGUN si hay sitio o no
 						nextTime = self.currentTime
-						self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
-						esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i])
+						self.traza.append(esdeveniment.element.iniciMaingate(self.currentTime))
+						esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element)
 						self.esdevenimentsPendents.append(esd1)
 						self.traza.append(esd1.esperantMainGate())
 
-						#hay que ver como hacemos lo de la traza
+						# hay que ver como hacemos lo de la traza del parking
 						esd2 = Esdeveniment(nextTime, constants.EV_ARRIVAL_PARKING, self.Parking[x])
 						self.esdevenimentsPendents.append(esd2)
 						self.traza.append(esd2.esperantMainGate())
 						break
-					else:
-						self.cuaParking += 1
-						self.traza.append(esdeveniment.encuar(self.cuaParking))
-						#tocar algo de la traza
-        self.esdevenimentsPendents.sort()
+				if not foundParking:
+					self.cuaParking += 1
+					self.traza.append(esdeveniment.encuar(self.cuaParking))
+					# tocar algo de la traza
+
+	self.esdevenimentsPendents.sort()
+
