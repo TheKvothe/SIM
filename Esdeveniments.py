@@ -1,4 +1,3 @@
-#ASD
 class Esdeveniment:
     """
     Una classe per a ordenar els esdeveniments, amb temps cada esdeveniment tindria la seva propia rutina d'execucio
@@ -9,11 +8,13 @@ class Esdeveniment:
     tipus = 0
     timestamp = 0
     element = None
+    camio = 0
 
-    def __init__(self, timestamp, tipus, element):
+    def __init__(self, timestamp, tipus, element, camio):
         self.timestamp = timestamp
         self.tipus = tipus
         self.element = element
+        self.camio = camio
 
     # Criteri d'ordenacio, necessari per a simular amb coherencia temporal
     def __lt__(self, other):
@@ -42,9 +43,9 @@ class Esdeveniment:
         return txt
 #--------------------------------------------------------------------------------------------------------------------------
     def arribadaCamio(self):
-        tip=["ARRIBADA AL MAINGATE","FISERVEI MAINGATE", ""]
+        tip=["Arribada al Maingate ","Fi de servei del MainGate ", "Arribada al Parking ", "Fi de servei del Parking "]
         #nom=self.element.name()
-        txt="	"+tip[self.tipus]+" del   a les "+str(self.timestamp)
+        txt = "	" + tip[self.tipus] + " del camio " + str(self.camio) + " a les " + str(self.timestamp)
         return txt
 
     def enviarMainGate(self, numGate):
@@ -66,3 +67,8 @@ class Esdeveniment:
         tip = ["ARRIBADA", "FISERVEI"]
         #nom = self.element.name()
         txt = " " + tip[self.tipus] + " de la posicio del parking " +  str(posParking) + " del camio a l'hora " +  str(self.timestamp)
+
+    def esperantMainGate(self):
+        tip = ["ARRIBADA", "FISERVEI"]
+        #nom = self.element.name()
+        txt = " " + tip[self.tipus] + " del gate   a l'hora " +  str(self.timestamp)

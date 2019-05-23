@@ -1,4 +1,4 @@
-class MainGate:
+class PosicioParking:
 
     libre = None
     num = None
@@ -7,7 +7,7 @@ class MainGate:
         self.libre = True
         self.num = data
 
-    def iniciMaingate (self, data):
+    def iniciPosicioParking (self, data):
         data
 
     def isFree(self):

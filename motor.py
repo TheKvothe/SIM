@@ -32,12 +32,15 @@ class Motor:
     cuaMainGate = 0
     cuaParking = 0
     traza = []
+    camio_num = 0
 
     def __init__(self):
         self.generador = Source(1)
         self.cuaMainGate = 0
         self.cuaParking = 0
+        self.camio_num += 1
         for i in range(0, 8):
+            print("inicializacion de los maingates" + str(i))
             self.MainGate[i] = MainGate(i)
         #for i in range(0, 100):
          #   self.Parking[i] = PosicioParking(i)
@@ -48,7 +51,8 @@ class Motor:
         self.inicialitzarLlistaEsdeveniments()
 
     def inicialitzarLlistaEsdeveniments(self):
-        esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador)
+        esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador, self.camio_num)
+        self.camio_num += 1
         self.esdevenimentsPendents.append(esd)
         self.traza.append(esd.programat())
 
@@ -67,7 +71,8 @@ class Motor:
             nextTime = self.generador.nextArrival()
             if nextTime >= 0:
                 nextTime += self.currentTime
-                esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador)
+                esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador, self.camio_num)
+                self.camio_num += 1
                 self.esdevenimentsPendents.append(esd)
                 self.traza.append(esd.programat())
             foundMainGate = False
@@ -76,7 +81,7 @@ class Motor:
                     foundMainGate = True
                     foundParking = False
                     for x in range(0, 100):
-                        if self.Parking[x].isFree():
+                     '''   if self.Parking[x].isFree():
                             foundParking = True
                             # nextTime-> determinar tiempo SEGUN si hay sitio o no
                             nextTime = self.currentTime
@@ -94,7 +99,7 @@ class Motor:
                         self.cuaParking += 1
                         self.traza.append(esdeveniment.encuar(self.cuaParking))
                     # tocar algo de la traza
-                    break
+                    break'''
             if not foundMainGate:
                 self.cuaMainGate += 1
                 self.traza.append(esdeveniment.encuar(self.cuaMainGate))
@@ -105,7 +110,7 @@ class Motor:
                 self.cua -= 1
                 foundParking = False
                 for x in range(0, 100):
-                    if self.Parking[x].isFree():
+                    '''if self.Parking[x].isFree():
                         foundParking = True  # nextTime-> determinar tiempo SEGUN si hay sitio o no
                         nextTime = self.currentTime
                         self.traza.append(esdeveniment.element.iniciMaingate(self.currentTime))
@@ -122,13 +127,14 @@ class Motor:
                     self.cuaParking += 1
                     self.traza.append(esdeveniment.encuar(self.cuaParking))
                 # tocar algo de la traza
+                '''
         elif esdeveniment.tipus == constants.EV_ARRIVAL_PARKING:
             # cuando llega alguien al parking habra que programar el evento de final de uso del parking
             self
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_PARKING:
-
-            # arreglar los elementos de la traza para que acepte el parking
+            '''
+            arreglar los elementos de la traza para que acepte el parking
             esdeveniment.element.Free()
             if self.cua > 0:
                 self.cua -= 1
@@ -139,3 +145,5 @@ class Motor:
                 self.esdevenimentsPendents.append(esd3)
                 self.traza.append(esd3.programat())
         self.esdevenimentsPendents.sort()
+
+            '''
