@@ -49,7 +49,7 @@ class Esdeveniment:
         return txt
 
     def enviarMainGate(self, numGate):
-        tip = ["ARRIBADA", "FISERsssVEI"]
+        tip = ["ARRIBADA", "FISEVEI"]
         #nom = self.element.name()
         txt = " " + tip[self.tipus] + " pel gate " +  str(numGate) + " del camio a l'hora " +  str(self.timestamp)
 
