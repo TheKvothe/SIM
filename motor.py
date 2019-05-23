@@ -27,8 +27,8 @@ class Motor:
     darrerServei = 0
 
     generador = None
-    Parking = []
-    MainGate = []
+    Parking = [None]*100
+    MainGate = [None]*8
     cuaMainGate = 0
     cuaParking = 0
     traza = []
@@ -39,8 +39,8 @@ class Motor:
         self.cuaParking = 0
         for i in range(0, 8):
             self.MainGate[i] = MainGate(i)
-        for i in range(0, 100):
-            self.Parking[i] = PosicioParking(i)
+        #for i in range(0, 100):
+         #   self.Parking[i] = PosicioParking(i)
         self.esdevenimentsPendents = []
         self.esdevenimentsProcessats = []
         self.currentTime = 0
@@ -48,7 +48,7 @@ class Motor:
         self.inicialitzarLlistaEsdeveniments()
 
     def inicialitzarLlistaEsdeveniments(self):
-        esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL, self.generador)
+        esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador)
         self.esdevenimentsPendents.append(esd)
         self.traza.append(esd.programat())
 

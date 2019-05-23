@@ -4,8 +4,11 @@ class MainGate:
     num = None
 
     def __init__(self, data):
-        ocupado = False
+        ocupado = True
         self.num = data
 
     def iniciMaingate (self, data):
         data
+
+    def isFree(self):
+        return ocupado

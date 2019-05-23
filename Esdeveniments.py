@@ -37,32 +37,32 @@ class Esdeveniment:
 
     def programat(self):
         tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
-        txt = "	" + tip[self.tipus] + " pel " + nom + " programada per a " + str(self.timestamp)
+        #nom = self.element.name()
+        txt = "	" + tip[self.tipus] + " pel programada per a " + str(self.timestamp)
         return txt
 #--------------------------------------------------------------------------------------------------------------------------
     def arribadaCamio(self):
         tip=["ARRIBADA AL MAINGATE","FISERVEI MAINGATE", ""]
-        nom=self.element.name()
-        txt="	"+tip[self.tipus]+" del  "+nom+" a les "+str(self.timestamp)
+        #nom=self.element.name()
+        txt="	"+tip[self.tipus]+" del   a les "+str(self.timestamp)
         return txt
 
     def enviarMainGate(self, numGate):
         tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
+        #nom = self.element.name()
         txt = " " + tip[self.tipus] + " pel gate " +  str(numGate) + " del camio a l'hora " +  str(self.timestamp)
 
     def enviarParking(self, posParking):
         tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
-        txt = " " + tip[self.tipus] + " a la posicio del parking" +  str(posParking) + " del camio " + nom + "a l'hora " +  str(self.timestamp)
+        #nom = self.element.name()
+        txt = " " + tip[self.tipus] + " a la posicio del parking" +  str(posParking) + " del camio a l'hora " +  str(self.timestamp)
 
     def posicioLliureMainGate(self, numGate):
         tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
+        #nom = self.element.name()
         txt = " " + tip[self.tipus] + " del gate " +  str(numGate) + " a l'hora " +  str(self.timestamp)
 
     def posicioLliureParking(self, posParking):
         tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
+        #nom = self.element.name()
         txt = " " + tip[self.tipus] + " de la posicio del parking " +  str(posParking) + " del camio a l'hora " +  str(self.timestamp)

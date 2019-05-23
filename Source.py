@@ -13,6 +13,6 @@ class Source:
             print("TODO")
 
     def nextArrival(self):
-        result = self.sources.item[-1]
+        result = self.sources[-1]
         self.sources.pop()
         return result
