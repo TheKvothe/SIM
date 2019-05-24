@@ -17,6 +17,9 @@ class MainGate:
     def isFree(self):
         return self.libre == constants.IDLE
 
+    def stateBusy(self):
+        self.libre = constants.BUSY
+
     def Free(self):
         self.libre = constants.IDLE
 

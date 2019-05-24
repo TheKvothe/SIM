@@ -35,6 +35,7 @@ class Motor:
     cuaParking = 0
     traza = []
     camio_num = 0
+    cuaParkingMaingates =[]
 
     test = 0
 
@@ -50,12 +51,13 @@ class Motor:
             self.Parking[i] = PosicioParking(i)
         self.esdevenimentsPendents = []
         self.esdevenimentsProcessats = []
+        self.cuaParkingMaingates = []
         self.currentTime = 0
 
         self.inicialitzarLlistaEsdeveniments()
 
     def inicialitzarLlistaEsdeveniments(self):
-        esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador, self.generador, self.camio_num)
+        esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador, self.camio_num)
         self.camio_num += 1
         self.esdevenimentsPendents.append(esd)
         self.traza.append(esd.programat())
@@ -78,7 +80,7 @@ class Motor:
             nextTime = self.generador.nextArrival()
             if nextTime >= 0:
                 nextTime += self.currentTime
-                esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, self.generador, self.camio_num)
+                esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, self.camio_num)
                 self.camio_num += 1
                 self.esdevenimentsPendents.append(esd)
                 self.traza.append(esd.programat())
@@ -88,6 +90,7 @@ class Motor:
                 if self.MainGate[i].isFree():
                     foundMainGate = True
                     foundParking = False
+                    print("estoy en el arrival maingate 1 , el nombre del gate es " + self.MainGate[i].name())
                     self.traza.append(self.MainGate[i].iniciServei(self.currentTime))
                     for x in range(0, 2):#ara mismo esta puesto aqui un 3 pero tendrian que ser 100
                         if self.Parking[x].isFree():
@@ -95,20 +98,25 @@ class Motor:
                             nextTime = self.Parking[x].nextEndService()
                             nextTime += self.currentTime
                             #self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
-                            esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i], self.MainGate[i], self.camio_num)
+                            esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i], self.camio_num)
                             self.esdevenimentsPendents.append(esd1)
                             self.traza.append(esd1.programat())
 
+                            print("estoy en el arrival maingate 2 , el nombre del gate es " + self.MainGate[i].name())
+
+                            # esto no funciona porque solo te dice el maingate del qual ha entrado no el que esta esperando TONTO
+
                             # hay que ver como hacemos lo de la traza del parking
                             self.traza.append(self.Parking[x].iniciServei(self.currentTime))
-                            esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, self.Parking[x], self.MainGate[i], self.camio_num)
+                            esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, self.Parking[x], self.camio_num)
                             self.esdevenimentsPendents.append(esd2)
                             self.traza.append(esd2.programat())
                             break
                     if not foundParking:
+                        self.cuaParkingMaingates.append(self.MainGate[i])
+                        self.MainGate[i].stateBusy()
                         self.cuaParking += 1
                         self.traza.append(esdeveniment.encuar("Cua de parking",self.cuaParking))
-                    # tocar algo de la traza
                     break
             if not foundMainGate:
                 self.cuaMainGate += 1
@@ -116,6 +124,7 @@ class Motor:
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_MAINGATE:
             esdeveniment.element.Free()
+            print("estoy en el endservice del maingate, el nombre del elemento es " + esdeveniment.element.name())
             if self.cuaMainGate > 0:
                 self.cuaMainGate -= 1
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
@@ -126,17 +135,19 @@ class Motor:
                         nextTime = self.Parking[x].nextEndService()
                         nextTime += self.currentTime
                         #self.traza.append(self.MainGate[i].iniciMaingate(self.currentTime))
-                        esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element, esdeveniment.element, self.camio_num)
+                        esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element, self.camio_num)
                         self.esdevenimentsPendents.append(esd1)
                         self.traza.append(esd1.programat())
 
                         # hay que ver como hacemos lo de la traza del parking
                         self.traza.append(self.Parking[x].iniciServei(self.currentTime))
-                        esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, self.Parking[x], esdeveniment.element, self.camio_num)
+                        esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, self.Parking[x], self.camio_num)
                         self.esdevenimentsPendents.append(esd2)
                         self.traza.append(esd2.programat())
                         break
                 if not foundParking:
+                    self.cuaParkingMaingates.append(self.MainGate[i])
+                    self.MainGate[i].stateBusy()
                     self.cuaParking += 1
                     self.traza.append(esdeveniment.encuar("Cua de parking", self.cuaParking))
 
@@ -145,19 +156,20 @@ class Motor:
             self
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_PARKING:
-            #falta por arreglar que saque por pantalla qual maingate se queda libre
-            esdeveniment.element2.Free()
+
             esdeveniment.element.Free()
             if self.cuaParking > 0:
+                elemento = self.cuaParkingMaingates.pop(0)
                 self.cuaParking -= 1
-                esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element2,esdeveniment.element2, self.camio_num)
+                #print("estoy en el endservice del parking, el nombre del elemento2 es " + esdeveniment.element2.name())
+                esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, elemento, self.camio_num)
                 self.esdevenimentsPendents.append(esd1)
                 self.traza.append(esd1.programat())
 
                 nextTime = esdeveniment.element.nextEndService()
                 nextTime += self.currentTime
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
-                esd3 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, esdeveniment.element, self.camio_num)
+                esd3 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, self.camio_num)
                 self.esdevenimentsPendents.append(esd3)
                 self.traza.append(esd3.programat())
 

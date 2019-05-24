@@ -8,14 +8,12 @@ class Esdeveniment:
     tipus = 0
     timestamp = 0
     element = None
-    element2 = None
     camio = 0
 
-    def __init__(self, timestamp, tipus, element, element2, camio):
+    def __init__(self, timestamp, tipus, element, camio):
         self.timestamp = timestamp
         self.tipus = tipus
         self.element = element
-        self.element2 = element2
         self.camio = camio
 
     # Criteri d'ordenacio, necessari per a simular amb coherencia temporal
