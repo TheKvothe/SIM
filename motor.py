@@ -161,7 +161,7 @@ class Motor:
             if self.cuaParking > 0:
                 elemento = self.cuaParkingMaingates.pop(0)
                 self.cuaParking -= 1
-                #print("estoy en el endservice del parking, el nombre del elemento2 es " + esdeveniment.element2.name())
+                #print("estoy en el endservice del parking, el nombre del elemento2 es " + esdeveniment.element2.name()
                 esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, elemento, self.camio_num)
                 self.esdevenimentsPendents.append(esd1)
                 self.traza.append(esd1.programat())
