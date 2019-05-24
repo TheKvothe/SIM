@@ -4,7 +4,7 @@ class MainGate:
 
     libre = constants.IDLE
     instancia = None
-    nextTime = 7
+    nextTime = 15
     numGat = None
 
     def __init__(self, instancia):
@@ -29,4 +29,4 @@ class MainGate:
         return "    " + nombre + " inicia Servei a " + str(temps)
 
     def name(self):
-        return "Maingate " + str(self.instancia) + " "
+        return "Maingate " + str(self.instancia)

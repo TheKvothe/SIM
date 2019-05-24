@@ -1,14 +1,32 @@
+import constants
+
 class PosicioParking:
 
-    libre = None
-    num = None
+    libre = constants.IDLE
+    instancia = None
+    nextTime = 10
+    numGat = None
 
-    def __init__(self, data):
+    def __init__(self, instancia):
         self.libre = True
-        self.num = data
+        self.instancia = instancia
 
     def iniciPosicioParking (self, data):
         data
 
     def isFree(self):
-        return self.libre
+        return self.libre == constants.IDLE
+
+    def Free(self):
+        self.libre = constants.IDLE
+
+    def nextEndService(self):
+        self.libre = constants.BUSY
+        return self.nextTime
+
+    def iniciServei(self, temps):
+        nombre = self.name()
+        return "    " + nombre + " inicia Servei a " + str(temps)
+
+    def name(self):
+        return "Posicio del parking " + str(self.instancia)

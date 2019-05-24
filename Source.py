@@ -9,7 +9,7 @@ class Source:
 
     def __init__(self, data):
         self.num = data
-        self.sources = [3, 6, 9, 12, -1]
+        self.sources = [3, 3, 3, 3, -1]
         '''if (self.num == 1):
             self.sources = np.random.exponential(1, 4).tolist()
         elif (self.num == 2):
