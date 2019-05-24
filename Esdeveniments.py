@@ -25,21 +25,22 @@ class Esdeveniment:
         return str(self.timestamp) + " " + tip[self.tipus] + " " + self.element.name()
 
     def executat(self):
-        tip = ["ARRIBADA", "FI SERVEI"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE"]
         nom = self.element.name()
+        #print(tip[self.tipus])
         txt = "" + str(self.timestamp) + " " + nom + " executa una " + tip[self.tipus]
         return txt
 
     def encuar(self, cua):
-        tip = ["ARRIBADA", "FI SERVEI"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE"]
         nom = self.element.name()
         txt = "		" + str(self.timestamp) + " arribada encuar una entitat " + str(cua)
         return txt
 
     def programat(self):
-        tip = ["ARRIBADA", "FISERVEI"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE"]
         #nom = self.element.name()
-        txt = "	" + tip[self.tipus] + " pel programada per a " + str(self.timestamp)
+        txt = "	" + tip[self.tipus] + " programada per a les " + str(self.timestamp)
         return txt
 #--------------------------------------------------------------------------------------------------------------------------
     def arribadaCamio(self):
