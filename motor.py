@@ -124,7 +124,7 @@ class Motor:
                 foundParking = False
                 for x in range(0, 100):
                     '''if self.Parking[x].isFree():
-                        foundParking = True  # nextTime-> determinar tiempo SEGUN si hay sitio o no
+                        foundParking = True  # nextTime-> determinar tiempo SEGUN si hay sitio o no.
                         nextTime = self.currentTime
                         self.traza.append(esdeveniment.element.iniciMaingate(self.currentTime))
                         esd1 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element)
