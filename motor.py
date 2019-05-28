@@ -67,11 +67,12 @@ class Motor:
 
     def inicialitzarLlistaEsdeveniments(self):
         esd = Esdeveniment(self.generador.nextArrival(), constants.EV_ARRIVAL_MAINGATE, self.generador, self.camio_num)
-        self.camio_num += 1
+        #self.camio_num += 1
         self.esdevenimentsPendents.append(esd)
         self.traza.append(esd.programat())
 
     def run(self):
+        continuar = True
         continuar = True
         while len(self.esdevenimentsPendents) and continuar:
             esdeveniment = self.esdevenimentsPendents.pop(0)
@@ -87,10 +88,13 @@ class Motor:
 
         if esdeveniment.tipus == constants.EV_ARRIVAL_MAINGATE:
             nextTime = self.generador.nextArrival()
+            #print(nextTime)
+            #print(self.camio_num)
             if nextTime >= 0:
+                print("hola")
                 nextTime += self.currentTime
                 esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, self.camio_num)
-                self.camio_num += 1
+                self.camio_num += 1 # esto no se hace bien porque entra
                 self.esdevenimentsPendents.append(esd)
                 self.traza.append(esd.programat())
 
@@ -99,7 +103,7 @@ class Motor:
                 if self.MainGate[i].isFree():
                     foundMainGate = True
                     foundParking = False
-                    print("estoy en el arrival maingate 1 , el nombre del gate es " + self.MainGate[i].name())
+                   # print("estoy en el arrival maingate 1 , el nombre del gate es " + self.MainGate[i].name())
                     self.traza.append(self.MainGate[i].iniciServei(self.currentTime))
                     for x in range(0, 2):#ara mismo esta puesto aqui un 3 pero tendrian que ser 100
                         if self.Parking[x].isFree():
@@ -111,7 +115,7 @@ class Motor:
                             self.esdevenimentsPendents.append(esd1)
                             self.traza.append(esd1.programat())
 
-                            print("estoy en el arrival maingate 2 , el nombre del gate es " + self.MainGate[i].name())
+                           # print("estoy en el arrival maingate 2 , el nombre del gate es " + self.MainGate[i].name())
 
                             # esto no funciona porque solo te dice el maingate del qual ha entrado no el que esta esperando TONTO
 
@@ -133,7 +137,7 @@ class Motor:
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_MAINGATE:
             esdeveniment.element.Free()
-            print("estoy en el endservice del maingate, el nombre del elemento es " + esdeveniment.element.name())
+           # print("estoy en el endservice del maingate, el nombre del elemento es " + esdeveniment.element.name())
             if self.cuaMainGate > 0:
                 self.cuaMainGate -= 1
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
@@ -155,8 +159,8 @@ class Motor:
                         self.traza.append(esd2.programat())
                         break
                 if not foundParking:
-                    self.cuaParkingMaingates.append(self.MainGate[i])
-                    self.MainGate[i].stateBusy()
+                    self.cuaParkingMaingates.append(esdeveniment.element)
+                    esdeveniment.element.stateBusy()
                     self.cuaParking += 1
                     self.traza.append(esdeveniment.encuar("Cua de parking", self.cuaParking))
 
