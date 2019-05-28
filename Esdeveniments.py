@@ -25,20 +25,22 @@ class Esdeveniment:
         return str(self.timestamp) + " " + tip[self.tipus] + " " + self.element.name()
 
     def executat(self):
-        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE","ARRIBADA AL PARKING", "FISERVEI DEL PARKING"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE","ARRIBADA AL PARKING", "FISERVEI DEL PARKING", "ARRIBA D'ESTIBADOR","FISERVEI ESTIBADOR"]
         nom = self.element.name()
         #print(tip[self.tipus])
         txt = "" + str(self.timestamp) + " " + nom + " executa una " + tip[self.tipus]
         return txt
 
     def encuar(self, nameQueue,cua):
-        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING",
+               "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
         nom = self.element.name()
         txt = "		" + str(self.timestamp) + " arribada encuar a "+ nameQueue+ " " + str(cua) + " entitats"
         return txt
 
     def programat(self):
-        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING",
+               "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
         #nom = self.element.name()
         txt = "	" + tip[self.tipus] + " programada per a les " + str(self.timestamp)
         return txt

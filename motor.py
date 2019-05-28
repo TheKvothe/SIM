@@ -2,6 +2,8 @@ from Source import Source  # Generador
 from MainGate import MainGate
 from PosicioParking import PosicioParking
 from Esdeveniments import Esdeveniment
+from Estibador import Estibador
+
 
 import constants
 
@@ -31,11 +33,13 @@ class Motor:
     generador = None
     Parking = [None]*2
     MainGate = [None]*3
+    Estibadors = [None]*1
     cuaMainGate = 0
     cuaParking = 0
     traza = []
     camio_num = 0
     cuaParkingMaingates =[]
+    cuaEstibadorsParking = []
 
     test = 0
 
@@ -49,9 +53,14 @@ class Motor:
             self.MainGate[i] = MainGate(i)
         for i in range(0, 2):
             self.Parking[i] = PosicioParking(i)
+        for i in range(0, 1):
+            self.Estibadors[i] = Estibador(i)
+
         self.esdevenimentsPendents = []
         self.esdevenimentsProcessats = []
         self.cuaParkingMaingates = []
+        self.cuaEstibadorsParking = []
+
         self.currentTime = 0
 
         self.inicialitzarLlistaEsdeveniments()
@@ -107,8 +116,8 @@ class Motor:
                             # esto no funciona porque solo te dice el maingate del qual ha entrado no el que esta esperando TONTO
 
                             # hay que ver como hacemos lo de la traza del parking
-                            self.traza.append(self.Parking[x].iniciServei(self.currentTime))
-                            esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, self.Parking[x], self.camio_num)
+                            #self.traza.append(self.Parking[x].iniciServei(self.currentTime))
+                            esd2 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, self.Parking[x], self.camio_num)
                             self.esdevenimentsPendents.append(esd2)
                             self.traza.append(esd2.programat())
                             break
@@ -140,8 +149,8 @@ class Motor:
                         self.traza.append(esd1.programat())
 
                         # hay que ver como hacemos lo de la traza del parking
-                        self.traza.append(self.Parking[x].iniciServei(self.currentTime))
-                        esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, self.Parking[x], self.camio_num)
+                        #self.traza.append(self.Parking[x].iniciServei(self.currentTime))#esto va a volar con los estibadores
+                        esd2 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, self.Parking[x], self.camio_num)#esto tendra que ser un arrival
                         self.esdevenimentsPendents.append(esd2)
                         self.traza.append(esd2.programat())
                         break
@@ -153,7 +162,43 @@ class Motor:
 
         elif esdeveniment.tipus == constants.EV_ARRIVAL_PARKING:
             # cuando llega alguien al parking habra que programar el evento de final de uso del parking
-            self
+
+            foundEstibador = False
+            self.traza.append(esdeveniment.element.iniciServei(self.currentTime))  # dentro o fuera del loop?
+            for i in range (0, 1):
+                if self.Estibadors[i].isFree():
+                    foundEstibador = True
+                    nextTime = self.Estibadors[i].nextEndService()
+                    nextTime += self.currentTime
+                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, self.camio_num)
+                    self.esdevenimentsPendents.append(esd2)
+                    self.traza.append(esd2.programat())
+
+                    self.traza.append(self.Estibadors[i].iniciServei(self.currentTime))
+                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, self.Estibadors[i], self.camio_num)
+                    self.esdevenimentsPendents.append(esd2)
+                    self.traza.append(esd2.programat())
+                    break
+            if not foundEstibador:
+                self.cuaEstibadorsParking.append(esdeveniment.element)
+                esdeveniment.element.stateBusy()
+
+        elif esdeveniment.tipus == constants.EV_ENDSERVICE_ESTIBADOR:
+            esdeveniment.element.Free()
+            if len(self.cuaEstibadorsParking) > 0:
+                elemento = self.cuaEstibadorsParking.pop(0)
+                elemento.Free()
+
+                nextTime = esdeveniment.element.nextEndService()
+                nextTime += self.currentTime
+                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, elemento, self.camio_num)
+                self.esdevenimentsPendents.append(esd2)
+                self.traza.append(esd2.programat())
+
+                self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
+                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, esdeveniment.element, self.camio_num)
+                self.esdevenimentsPendents.append(esd2)
+                self.traza.append(esd2.programat())
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_PARKING:
 
@@ -169,8 +214,8 @@ class Motor:
 
                 nextTime = esdeveniment.element.nextEndService()
                 nextTime += self.currentTime
-                self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
-                esd3 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, self.camio_num)
+                #self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
+                esd3 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, esdeveniment.element, self.camio_num)
                 self.esdevenimentsPendents.append(esd3)
                 self.traza.append(esd3.programat())
 

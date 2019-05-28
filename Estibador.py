@@ -1,6 +1,7 @@
 import constants
 
-class PosicioParking:
+
+class Estibador:
 
     libre = constants.IDLE
     instancia = None
@@ -16,8 +17,6 @@ class PosicioParking:
 
     def isFree(self):
         return self.libre == constants.IDLE
-    def stateBusy(self):
-        self.libre = constants.BUSY
 
     def Free(self):
         self.libre = constants.IDLE
@@ -31,4 +30,4 @@ class PosicioParking:
         return "    " + nombre + " inicia Servei a " + str(temps)
 
     def name(self):
-        return "Posicio del parking " + str(self.instancia)
+        return "Estibador " + str(self.instancia)
