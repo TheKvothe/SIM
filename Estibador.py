@@ -31,3 +31,15 @@ class Estibador:
 
     def name(self):
         return "Estibador " + str(self.instancia)
+
+#########################################################
+# - Que hay que hacer para el viernes					#
+# - Tema triangulación - Como la debemos aplicar ()		#
+# - Tema visual ?										#
+# - Testing ?											#
+# - MEJORAS ESTIBADOR:									#
+#   - poner los diferentes tipos de camiones: entrega,	#
+#	  recogida y entrega y recogida						#
+#	- poner diferente tiempo de tiempo de proceso en	#
+#	vez de 10											#
+#########################################################
