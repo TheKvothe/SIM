@@ -95,7 +95,7 @@ class Motor:
                 self.traza.append(esd.programat())
 
             foundMainGate = False
-            for i in range(0, 3):#ara mismo esta puesto aqui un 3 pero tendrian que ser 8
+            for i in range(0, 3):#ara mismo esta puesto aqui un 3 pero tendrian que ser  8
                 if self.MainGate[i].isFree():
                     foundMainGate = True
                     foundParking = False
