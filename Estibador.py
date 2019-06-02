@@ -8,6 +8,7 @@ class Estibador:
     nextTime = 10
     numGat = None
 
+
     def __init__(self, instancia):
         self.libre = True
         self.instancia = instancia
@@ -43,3 +44,7 @@ class Estibador:
 #	- poner diferente tiempo de tiempo de proceso en	#
 #	vez de 10											#
 #########################################################
+
+
+#explicar el documento que hicimos
+

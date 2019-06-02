@@ -11,11 +11,9 @@ class PosicioParking:
         self.libre = True
         self.instancia = instancia
 
-    def iniciPosicioParking (self, data):
-        data
-
     def isFree(self):
         return self.libre == constants.IDLE
+
     def stateBusy(self):
         self.libre = constants.BUSY
 
