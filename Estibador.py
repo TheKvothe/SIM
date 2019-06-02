@@ -7,7 +7,7 @@ class Estibador:
     instancia = None
     nextTime = 10
     numGat = None
-
+    Time = [10, 5, 26]
 
     def __init__(self, instancia):
         self.libre = True
@@ -22,9 +22,9 @@ class Estibador:
     def Free(self):
         self.libre = constants.IDLE
 
-    def nextEndService(self):
+    def nextEndService(self, tipo):
         self.libre = constants.BUSY
-        return self.nextTime
+        return self.Time[tipo]
 
     def iniciServei(self, temps):
         nombre = self.name()

@@ -76,7 +76,7 @@ class Motor:
         self.camio_num +=1
         time = self.generador.nextArrival()
 
-        camio = Camio(0, self.camio_num,time)
+        camio = Camio(constants.RECO_DESC, self.camio_num,time)
         esd = Esdeveniment(time, constants.EV_ARRIVAL_MAINGATE, self.generador, camio)
 
         self.esdevenimentsPendents.append(esd)
@@ -106,7 +106,7 @@ class Motor:
 
                 nextTime += self.currentTime
                 self.camio_num += 1
-                camio = Camio(0, self.camio_num, nextTime)
+                camio = Camio(constants.DESCARREGA, self.camio_num, nextTime)
                 esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, camio)
                  # esto no se hace bien porque entra
                 self.esdevenimentsPendents.append(esd)
@@ -206,7 +206,7 @@ class Motor:
             for i in range (0, 2):
                 if self.Estibadors[i].isFree():
                     foundEstibador = True
-                    nextTime = self.Estibadors[i].nextEndService()
+                    nextTime = self.Estibadors[i].nextEndService(esdeveniment.camio.TipusOp)
                     nextTime += self.currentTime
                     esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, esdeveniment.camio)
                     self.esdevenimentsPendents.append(esd2)
