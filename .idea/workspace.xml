@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="18f4ceb7-42f1-473f-ad97-50241d9411d3" name="Default Changelist" comment="arreglos del motor">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Esdeveniments.py" beforeDir="false" afterPath="$PROJECT_DIR$/Esdeveniments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGate.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
+=======
+    <list default="true" id="18f4ceb7-42f1-473f-ad97-50241d9411d3" name="Default Changelist" comment="commit motor con el parking funcionando preliminar">
+      <change afterPath="$PROJECT_DIR$/Estibador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esdeveniments.py" beforeDir="false" afterPath="$PROJECT_DIR$/Esdeveniments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PosicioParking.py" beforeDir="false" afterPath="$PROJECT_DIR$/PosicioParking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+>>>>>>> Arthur
       <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Esdeveniments.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,10 +41,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/motor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1807">
+              <caret line="197" column="60" selection-start-line="197" selection-start-column="55" selection-end-line="197" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Esdeveniments.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+>>>>>>> Arthur
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/motor.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,6 +73,22 @@
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Estibador.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainGate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="35" />
+>>>>>>> Arthur
             </state>
           </provider>
         </entry>
@@ -50,13 +96,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="225">
               <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+=======
+            <state relative-caret-position="165">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PosicioParking.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+>>>>>>> Arthur
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -64,18 +125,57 @@
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+>>>>>>> Arthur
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
   <component name="FindInProjectRecents">
     <findStrings>
       <find>execut</find>
       <find>encu</find>
       <find>traza</find>
       <find>nom</find>
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>encu</find>
+      <find>traza</find>
+      <find>nom</find>
+      <find>programat</find>
+      <find>prog</find>
+      <find>nextAr</find>
+      <find>generad</find>
+      <find>al maing</find>
+      <find>genera</find>
+      <find>source</find>
+      <find>arribada</find>
+      <find>nextArri</find>
+      <find>nextA</find>
+      <find>current</find>
+      <find>camio_num</find>
+      <find>inic</find>
+      <find>cuaParking</find>
+      <find>cuaParkingMai</find>
+      <find>cuaParkingMaingates</find>
+      <find>execut</find>
+      <find>esdeveniment.element.</find>
+>>>>>>> Arthur
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,7 +187,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="Arthur" />
+=======
+        <entry key="$PROJECT_DIR$" value="master" />
+>>>>>>> Arthur
       </map>
     </option>
   </component>
@@ -99,13 +203,25 @@
         <option value="$PROJECT_DIR$/Source.py" />
         <option value="$PROJECT_DIR$/MainGate.py" />
         <option value="$PROJECT_DIR$/Esdeveniments.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/motor.py" />
+=======
+        <option value="$PROJECT_DIR$/Estibador.py" />
+        <option value="$PROJECT_DIR$/motor.py" />
+        <option value="$PROJECT_DIR$/PosicioParking.py" />
+        <option value="$PROJECT_DIR$/constants.py" />
+>>>>>>> Arthur
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+<<<<<<< HEAD
     <option name="width" value="1280" />
     <option name="height" value="800" />
+=======
+    <option name="width" value="340" />
+    <option name="height" value="900" />
+>>>>>>> Arthur
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -186,6 +302,13 @@
       <workItem from="1558103716582" duration="492000" />
       <workItem from="1558433803125" duration="154000" />
       <workItem from="1558442199654" duration="1906000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1558684549340" duration="16048000" />
+      <workItem from="1558702583012" duration="215000" />
+      <workItem from="1558938322502" duration="452000" />
+      <workItem from="1558977466259" duration="3455000" />
+>>>>>>> Arthur
     </task>
     <task id="LOCAL-00001" summary="arreglos del motor">
       <created>1558436019636</created>
@@ -193,6 +316,7 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1558436019636</updated>
+<<<<<<< HEAD
     </task>
     <task id="LOCAL-00002" summary="arreglos del motor">
       <created>1558437029547</created>
@@ -213,12 +337,115 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="7285000" />
+=======
+    </task>
+    <task id="LOCAL-00002" summary="arreglos del motor">
+      <created>1558437029547</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558437029547</updated>
+    </task>
+    <task id="LOCAL-00003" summary="arreglos del motor">
+      <created>1558441770703</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558441770704</updated>
+    </task>
+    <task id="LOCAL-00004" summary="arreglos del motor">
+      <created>1558639143524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558639143524</updated>
+    </task>
+    <task id="LOCAL-00005" summary="arreglos del motor">
+      <created>1558640784142</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558640784142</updated>
+    </task>
+    <task id="LOCAL-00006" summary="arreglos 2">
+      <created>1558641772284</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558641772284</updated>
+    </task>
+    <task id="LOCAL-00007" summary="arreglo de los commits">
+      <created>1558641838394</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558641838394</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Motor con maingate  funcionando sin la parte de la cola de mainGate">
+      <created>1558691722418</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558691722418</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit extra">
+      <created>1558691758953</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558691758953</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commit motor con el parking funcionando preliminar">
+      <created>1558696766462</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558696766462</updated>
+    </task>
+    <task id="LOCAL-00011" summary="motor funcionando con el parkinga">
+      <created>1558701143161</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558701143161</updated>
+    </task>
+    <task id="LOCAL-00012" summary="commit motor con el parking funcionando preliminar">
+      <created>1558701188216</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558701188216</updated>
+    </task>
+    <task id="LOCAL-00013" summary="motor 1">
+      <created>1558701392421</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558701392421</updated>
+    </task>
+    <task id="LOCAL-00014" summary="motor2">
+      <created>1558701454612</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558701454612</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29536000" />
+>>>>>>> Arthur
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1702432" />
+>>>>>>> Arthur
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -231,8 +458,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49713877" weight="0.036144577" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32891566" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" visible="true" weight="0.32891566" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.26385543" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.3433735" />
+>>>>>>> Arthur
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -242,13 +474,50 @@
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27825466" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49713877" weight="0.036144577" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.26385543" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.26385543" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="arreglos del motor" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="arreglos del motor" />
+=======
+    <MESSAGE value="arreglos 2" />
+    <MESSAGE value="arreglo de los commits" />
+    <MESSAGE value="Motor con maingate  funcionando sin la parte de la cola de mainGate" />
+    <MESSAGE value="commit extra" />
+    <MESSAGE value="motor funcionando con el parkinga" />
+    <MESSAGE value="commit motor con el parking funcionando preliminar" />
+    <MESSAGE value="motor 1" />
+    <MESSAGE value="motor2" />
+    <option name="LAST_COMMIT_MESSAGE" value="motor2" />
+>>>>>>> Arthur
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -264,6 +533,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/constants.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -285,11 +555,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Estibador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Esdeveniments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+>>>>>>> Arthur
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainGate.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="195">
           <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
@@ -299,15 +597,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="584">
           <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+=======
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PosicioParking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+>>>>>>> Arthur
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/motor.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="284">
           <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+=======
+        <state relative-caret-position="1807">
+          <caret line="197" column="60" selection-start-line="197" selection-start-column="55" selection-end-line="197" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+>>>>>>> Arthur
           </folding>
         </state>
       </provider>

@@ -1,18 +1,15 @@
 import constants
 
-class MainGate:
+class PosicioParking:
 
     libre = constants.IDLE
     instancia = None
-    nextTime = 15
+    nextTime = 10
     numGat = None
 
     def __init__(self, instancia):
         self.libre = True
         self.instancia = instancia
-
-    def iniciMaingate (self, data):
-        data
 
     def isFree(self):
         return self.libre == constants.IDLE
@@ -32,4 +29,4 @@ class MainGate:
         return "    " + nombre + " inicia Servei a " + str(temps)
 
     def name(self):
-        return "Maingate " + str(self.instancia)
+        return "Posicio del parking " + str(self.instancia)

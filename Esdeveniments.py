@@ -1,4 +1,5 @@
-#ASD
+from Camio import Camio
+
 class Esdeveniment:
     """
     Una classe per a ordenar els esdeveniments, amb temps cada esdeveniment tindria la seva propia rutina d'execucio
@@ -9,11 +10,16 @@ class Esdeveniment:
     tipus = 0
     timestamp = 0
     element = None
+    camio = None
 
-    def __init__(self, timestamp, tipus, element):
+    def __init__(self, timestamp, tipus, element, camio):
         self.timestamp = timestamp
         self.tipus = tipus
         self.element = element
+        self.camio = camio
+
+    def cambiarCamio(self, camioAux):
+        self.camio = camioAux
 
     # Criteri d'ordenacio, necessari per a simular amb coherencia temporal
     def __lt__(self, other):
@@ -24,48 +30,22 @@ class Esdeveniment:
         return str(self.timestamp) + " " + tip[self.tipus] + " " + self.element.name()
 
     def executat(self):
-        tip = ["ARRIBADA", "FI SERVEI"]
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE","ARRIBADA AL PARKING", "FISERVEI DEL PARKING", "ARRIBA D'ESTIBADOR","FISERVEI ESTIBADOR"]
         nom = self.element.name()
-        txt = "" + str(self.timestamp) + " " + nom + " executa una " + tip[self.tipus]
+        #print(tip[self.tipus])
+        txt = "" + str(self.timestamp) + " " + nom + " executa una " + tip[self.tipus] + " Camio " + str(self.camio.iD) + "( initCamio = " + str(self.camio.DataCreacio) + " endCamio = " + str(self.camio.DataFinalitzacio) + " )"
         return txt
 
-    def encuar(self, cua):
-        tip = ["ARRIBADA", "FI SERVEI"]
+    def encuar(self, nameQueue,cua):
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING",
+               "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
         nom = self.element.name()
-        txt = "		" + str(self.timestamp) + " arribada encuar una entitat " + str(cua)
+        txt = "		" + str(self.timestamp) + " arribada encuar a "+ nameQueue+ " " + str(cua) + " entitats. Camio " + str(self.camio.iD)
         return txt
 
     def programat(self):
-        tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
-        txt = "	" + tip[self.tipus] + " pel " + nom + " programada per a " + str(self.timestamp)
+        tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING",
+               "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
+        #nom = self.element.name()
+        txt = "	" + tip[self.tipus] + " programada per a les " + str(self.timestamp) + " Camio " + str(self.camio.iD)
         return txt
-#--------------------------------------------------------------------------------------------------------------------------
-    def arribadaCamio(self):
-        tip=["ARRIBADA","FISERVEI"]
-        nom=self.element.name()
-        txt="	"+tip[self.tipus]+" del  "+nom+" a les "+str(self.timestamp)
-        return txt
-
-    def enviarMainGate(self, numGate):
-        tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
-        txt = " " + tip[self.tipus] + " pel gate " +  str(numGate) + " del camio a l'hora " +  str(self.timestamp)
-
-    def enviarParking(self, posParking):
-        tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
-        txt = " " + tip[self.tipus] + " a la posicio del parking" +  str(posParking) + " del camio " + nom + "a l'hora " +  str(self.timestamp)
-
-    def posicioLliureMainGate(self, numGate):
-        tip = ["ARRIBADA", "FISERVEI"]
-        nom = self.element.name()
-        txt = " " + tip[self.tipus] + " del gate " +  str(numGate) + " a l'hora " +  str(self.timestamp)
-
-    def posicioLliureParking(self, posParking):
-        tip = ["ARRIBADA", "FISERVEI"]
-        txt = " " + tip[self.tipus] + " de la posicio del parking " +  str(posParking) + " del camio a l'hora " +  str(self.timestamp)
-
-    def esperantMainGate(self):
-        tip = ["ARRIBADA", "FISERVEI"]
-        txt = "	jajas"

@@ -1,21 +1,24 @@
 import numpy as np
 
+
 class Source:
 
     num = None
-    sources = None
+    sources = [None]*5
+    iterador = -1
 
     def __init__(self, data):
         self.num = data
-        if (self.num == 1):
+        self.sources = [3, 3, 3, 3, -1]
+        '''if (self.num == 1):
             self.sources = np.random.exponential(1, 4).tolist()
         elif (self.num == 2):
-            print("TODO")
+            print("TODO")'''
 
     def nextArrival(self):
-        result = self.sources[0]
-        self.sources.pop()
-        return result
+        self.iterador += 1
+        #print(self.sources[self.iterador])
+        return self.sources[self.iterador]
 
     def name(self):
-        return str(self.sources[0])
+        return "generador"
