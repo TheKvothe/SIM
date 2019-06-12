@@ -1,4 +1,5 @@
 from motor import Motor
+from testing import Testing, bcolors
 
 
 def main(args):
@@ -8,6 +9,18 @@ def main(args):
 if __name__ == '__main__':
 	import sys
 
-	motor = Motor()
-	motor.run()
-	print(motor.esdevenimentsProcessats)
+	print("Que vols executar?")
+	print("	1. Traca")
+	print("	2. Tests")
+	mode = int(raw_input('Mode( 1 o 2 ): '))
+	if mode == 1:
+		motor = Motor()
+		motor.run()
+		print(motor.esdevenimentsProcessats)
+
+	elif mode == 2:
+		Testing()
+
+
+	# Probar que los estados sean correctos, BUSY, IDLE (main, parking,estibador) con los iniciservei
+	# o cuando no tienen nada (unitario)

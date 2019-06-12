@@ -106,7 +106,7 @@ class Motor:
 
                 nextTime += self.currentTime
                 self.camio_num += 1
-                camio = Camio(constants.DESCARREGA, self.camio_num, nextTime)
+                camio = Camio(constants.RECO_DESC, self.camio_num, nextTime)
                 esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, camio)
                  # esto no se hace bien porque entra
                 self.esdevenimentsPendents.append(esd)
@@ -255,6 +255,7 @@ class Motor:
 
             for x in range(0, 2):
                 print("end parking "+self.Parking[x].name() + " " + str(self.Parking[x].libre)+ " " + str(self.currentTime))
+
             esdeveniment.camio.FiTemps(self.currentTime)
             esdeveniment.element.Free()
             if self.cuaParking > 0:
