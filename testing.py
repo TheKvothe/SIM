@@ -66,7 +66,7 @@ class Testing:
 
         assert mainGate.libre == constants.BUSY, self.errorbusy
 
-        print bcolors.OKGREEN + "Test de MainGates correctes" + bcolors.ENDC
+        print (bcolors.OKGREEN + "Test de MainGates correctes" + bcolors.ENDC)
 
     #esta funcion comprueba que los estados de las posiciones de parking varian correctamente en funcion de las
     #->operaciones que se le pueden aplicar durante la ejecucion
@@ -88,7 +88,7 @@ class Testing:
 
         assert parking.libre == constants.BUSY, self.errorbusy
 
-        print bcolors.OKGREEN + "Test de Parking correctes" + bcolors.ENDC
+        print (bcolors.OKGREEN + "Test de Parking correctes" + bcolors.ENDC)
 
 
     #esta funcion comprueba que los estados de los estibadores varian correctamente en funcion de las
@@ -107,7 +107,7 @@ class Testing:
 
         assert estibador.libre == constants.IDLE, self.erroridle
 
-        print bcolors.OKGREEN + "Test d'Estibador correctes" + bcolors.ENDC
+        print (bcolors.OKGREEN + "Test d'Estibador correctes" + bcolors.ENDC)
 
     #esta funcion comprueba que cuando un camion llega si hay posicion de parking libre y de maingate
     #->va directamente a la posicion de parking
@@ -118,7 +118,7 @@ class Testing:
         motor.tractarEsdeveniment(esd)
         assert motor.Parking[0].libre == constants.BUSY, self.errorbusy
 
-        print bcolors.OKGREEN + "El flow cuan tot esta lliure es correcte" + bcolors.ENDC
+        print (bcolors.OKGREEN + "El flow cuan tot esta lliure es correcte" + bcolors.ENDC)
 
 
     #esta funcion comprueba que cuando un camion llega si hay posicion de parking libre y de maingate
@@ -139,7 +139,7 @@ class Testing:
 
         assert motor.MainGate[0].libre == constants.BUSY, self.errorbusy
 
-        print bcolors.OKGREEN + "El flow fins al main gate cuan tots els parkings estan ocupats es correcte" + bcolors.ENDC
+        print (bcolors.OKGREEN + "El flow fins al main gate cuan tots els parkings estan ocupats es correcte" + bcolors.ENDC)
 
 
 
@@ -165,7 +165,7 @@ class Testing:
         assert motor.CMCamions[0] == camio3, self.errorcamio3
         assert motor.cuaMainGate == 2, self.errortamanycua2
 
-        print bcolors.OKGREEN + "La cua del maingate funciona correctament" + bcolors.ENDC
+        print (bcolors.OKGREEN + "La cua del maingate funciona correctament" + bcolors.ENDC)
 
 
     def generationQueueParking(self):
@@ -190,7 +190,7 @@ class Testing:
         assert motor.CPMCamions[0] == camio4, self.errorcamio4
         assert motor.cuaParking == 1, self.errortamanycua1
 
-        print bcolors.OKGREEN + "La cua del parking funciona correctament" + bcolors.ENDC
+        print (bcolors.OKGREEN + "La cua del parking funciona correctament" + bcolors.ENDC)
 
     def flowEstibadors(self):
         motor = Motor(1,3,2)
@@ -221,7 +221,7 @@ class Testing:
 
         assert motor.Estibadors[0].libre == constants.BUSY, self.errorbusy
 
-        print bcolors.OKGREEN + "El flow dels estibadors es correcte" + bcolors.ENDC
+        print (bcolors.OKGREEN + "El flow dels estibadors es correcte" + bcolors.ENDC)
 
 
     def controlEndParking(self):
@@ -252,4 +252,4 @@ class Testing:
         assert motor.cuaParking == 1,self.errortamanycua1
         assert motor.CPMCamions[0] == camio4, self.errorcamio4
 
-        print bcolors.OKGREEN + "Les finalitzacions del parking funcionen correctament" + bcolors.ENDC
+        print (bcolors.OKGREEN + "Les finalitzacions del parking funcionen correctament" + bcolors.ENDC)
