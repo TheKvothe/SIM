@@ -36,11 +36,22 @@ class Esdeveniment:
         txt = "" + str(self.timestamp) + " " + nom + " executa una " + tip[self.tipus] + " Camio " + str(self.camio.iD) + "( initCamio = " + str(self.camio.DataCreacio) + " endCamio = " + str(self.camio.DataFinalitzacio) + " )"
         return txt
 
+    def executat_gui(self):
+        tip = ["ARRIBADA,MAINGATE", "FISERVEI,MAINGATE","ARRIBADA,PARKING", "FISERVEI,PARKING", "ARRIBA,ESTIBADOR","FISERVEI,ESTIBADOR"]
+        nom = self.element.name()
+        txt = "" + nom +","+ str(self.timestamp) + ",EXECUTAR,"+ tip[self.tipus]+""
+        print(txt)
+        return txt
+
     def encuar(self, nameQueue,cua):
         tip = ["ARRIBADA AL MAINGATE", "FISERVEI DEL MAINGATE", "ARRIBADA AL PARKING", "FISERVEI DEL PARKING",
                "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
         nom = self.element.name()
         txt = "		" + str(self.timestamp) + " arribada encuar a "+ nameQueue+ " " + str(cua) + " entitats. Camio " + str(self.camio.iD)
+        return txt
+
+    def encuar_gui(self, nameQueue, cua):
+        txt = nameQueue+","+str(self.timestamp)+",ENCUAR,"+str(self.timestamp) + ","+str(cua)
         return txt
 
     def programat(self):

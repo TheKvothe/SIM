@@ -28,5 +28,9 @@ class PosicioParking:
         nombre = self.name()
         return "    " + nombre + " inicia Servei a " + str(temps)
 
+    def iniciServei_gui(self, temps):
+        nombre = self.name()
+        return ""+nombre+","+str(temps)+",INICISERVEI"
+
     def name(self):
         return "Posicio del parking " + str(self.instancia)

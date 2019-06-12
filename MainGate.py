@@ -31,5 +31,9 @@ class MainGate:
         nombre = self.name()
         return "    " + nombre + " inicia Servei a " + str(temps)
 
+    def iniciServei_gui(self, temps):
+        nombre = self.name()
+        return ""+nombre+","+str(temps)+",INICISERVEI"
+
     def name(self):
         return "Maingate " + str(self.instancia)

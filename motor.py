@@ -4,8 +4,7 @@ from PosicioParking import PosicioParking
 from Esdeveniments import Esdeveniment
 from Estibador import Estibador
 from Camio import Camio
-
-
+from GUI import GUI
 import constants
 
 
@@ -37,13 +36,14 @@ class Motor:
     cuaMainGate = 0
     cuaParking = 0
     traza = []
+    traza_gui = []
     camio_num = 0
     cuaParkingMaingates =[]
     CPMCamions =[]
     cuaEstibadorsParking = []
     CEPCamions =[]
     CMCamions =[]
-
+    GUI = None
 
     test = 0
 
@@ -66,10 +66,9 @@ class Motor:
         self.CEPCamions = []
         self.CPMCamions = []
         self.CMCamions = []
-
         self.currentTime = 0
-
         self.inicialitzarLlistaEsdeveniments()
+
 
     def inicialitzarLlistaEsdeveniments(self):
         self.camio_num +=1
@@ -89,13 +88,16 @@ class Motor:
             continuar = self.tractarEsdeveniment(esdeveniment)
         for i in range(0, len(self.traza)):
             print(self.traza[i])
+        self.GUI = GUI()
+        self.GUI.setTraza(self.traza_gui)
+        self.GUI.run()
 
 
     def tractarEsdeveniment(self, esdeveniment):
         self.currentTime = esdeveniment.timestamp
 
         self.traza.append(esdeveniment.executat())
-       # print(str(esdeveniment.element.name())+" " + self.Parking[1].name() + " esta " + str(self.Parking[1].libre))
+        self.traza_gui.append(esdeveniment.executat_gui())
 
         if esdeveniment.tipus == constants.EV_ARRIVAL_MAINGATE:
             nextTime = self.generador.nextArrival()
@@ -116,11 +118,10 @@ class Motor:
                 if self.MainGate[i].isFree():
                     foundMainGate = True
                     foundParking = False
-                    for x in range(0, 2):
-                        print("arrival maingate " + self.Parking[x].name() + " " + str(self.Parking[x].libre) + " " + str(
-                            self.currentTime))
+
                     # print("estoy en el arrival maingate 1 , el nombre del gate es " + self.MainGate[i].name())
                     self.traza.append(self.MainGate[i].iniciServei(self.currentTime))
+                    self.traza_gui.append(self.MainGate[i].iniciServei_gui(self.currentTime))
                     for x in range(0, 2):#ara mismo esta puesto aqui un 3 pero tendrian que ser 100
                         #print(" arrival maingate " +self.Parking[x].name() + " esta " + str(self.Parking[x].libre))
                         if self.Parking[x].isFree():
@@ -149,24 +150,26 @@ class Motor:
                         self.MainGate[i].stateBusy()
                         self.cuaParking += 1
                         self.traza.append(esdeveniment.encuar("Cua de parking",self.cuaParking))
+                        self.traza_gui.append(esdeveniment.encuar_gui("PARKING", self.cuaParking))
                     break
             if not foundMainGate:
                 self.cuaMainGate += 1
                 self.CMCamions.append(esdeveniment.camio)
                 self.traza.append(esdeveniment.encuar("Cua de Maingate", self.cuaMainGate))
+                self.traza_gui.append(esdeveniment.encuar_gui("MAINGATE", self.cuaMainGate))
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_MAINGATE:
             esdeveniment.element.Free()
-            for x in range(0, 2):
-                print("end maingate "+self.Parking[x].name() + " " + str(self.Parking[x].libre)+ " " + str(self.currentTime))
+
            # print("estoy en el endservice del maingate, el nombre del elemento es " + esdeveniment.element.name())
             if self.cuaMainGate > 0:
                 self.cuaMainGate -= 1
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
+                self.traza_gui.append(esdeveniment.element.iniciServei_gui(self.currentTime))
+
                 CamioEsd = self.CMCamions.pop(0)
                 foundParking = False
                 for x in range(0, 2):
-                    print("he llegado aqui " + str(CamioEsd.iD))
                     #print(" end maingate " + self.Parking[x].name() + " esta " + str(self.Parking[x].libre))
                     if self.Parking[x].isFree():
                         #print("soy el camion: " + str(CamioEsd.iD) + " y la " + self.Parking[1].name() + " esta libre")
@@ -186,22 +189,20 @@ class Motor:
                         self.traza.append(esd2.programat())
                         break
                 if not foundParking:
-                    print("jajas y " + str(CamioEsd.iD))
                     self.cuaParkingMaingates.append(esdeveniment.element)
                     self.CPMCamions.append(CamioEsd)
                     esdeveniment.element.stateBusy()
                     esdeveniment.cambiarCamio(CamioEsd)
                     self.cuaParking += 1
                     self.traza.append(esdeveniment.encuar("Cua de parking", self.cuaParking))#esto creo que esta mal, falta que en la cola me saque bien que camion
+                    self.traza_gui.append(esdeveniment.encuar_gui("PARKING", self.cuaParking))
 
         elif esdeveniment.tipus == constants.EV_ARRIVAL_PARKING:
             # cuando llega alguien al parking habra que programar el evento de final de uso del parking
-            for x in range(0, 2):
-                print("arrival parking  "+self.Parking[x].name() + " " + str(self.Parking[x].libre)+ " " + str(self.currentTime))
-
             foundEstibador = False
             self.traza.append(esdeveniment.element.iniciServei(self.currentTime))  # dentro o fuera del loop?
-         #   print(esdeveniment.element.name() + " " + str(esdeveniment.element.libre) + " en el " + str(esdeveniment.timestamp))
+            self.traza_gui.append(esdeveniment.element.iniciServei_gui(self.currentTime))
+            #   print(esdeveniment.element.name() + " " + str(esdeveniment.element.libre) + " en el " + str(esdeveniment.timestamp))
             for i in range (0, 2):
                 if self.Estibadors[i].isFree():
                     foundEstibador = True
@@ -212,6 +213,7 @@ class Motor:
                     self.traza.append(esd2.programat())
 
                     self.traza.append(self.Estibadors[i].iniciServei(self.currentTime))
+                    self.traza_gui.append(self.Estibadors[i].iniciServei_gui(self.currentTime))
                     esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, self.Estibadors[i], esdeveniment.camio)
                     self.esdevenimentsPendents.append(esd2)
                     self.traza.append(esd2.programat())
@@ -223,8 +225,6 @@ class Motor:
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_ESTIBADOR:
 
-            for x in range(0, 2):
-                print("end estibador 1 "+self.Parking[x].name() + " " + str(self.Parking[x].libre)+ " " + str(self.currentTime))
             esdeveniment.element.Free()
             if len(self.cuaEstibadorsParking) > 0:
 
@@ -242,18 +242,13 @@ class Motor:
                 self.traza.append(esd2.programat())
 
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
+                self.traza_gui.append(esdeveniment.element.iniciServei(self.currentTime))
                 esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, esdeveniment.element, CamioEsd)
                 self.esdevenimentsPendents.append(esd2)
                 self.traza.append(esd2.programat())
 
-                for x in range(0, 2):
-                    print("end estibador 2 " + self.Parking[x].name() + " " + str(self.Parking[x].libre) + " " + str(
-                        self.currentTime))
-
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_PARKING:
 
-            for x in range(0, 2):
-                print("end parking "+self.Parking[x].name() + " " + str(self.Parking[x].libre)+ " " + str(self.currentTime))
             esdeveniment.camio.FiTemps(self.currentTime)
             esdeveniment.element.Free()
             if self.cuaParking > 0:
