@@ -2,12 +2,16 @@ from Canvas import Canvas
 import tkinter
 
 
+
 class GUI:
     def __init__(self):
         self.canvs = None
         self.traza = []
         self.mainWindow = tkinter.Tk()
         self.mainWindow.title("Terminal APMT")
+
+        self.isPause = True
+        self.delaySpeed = 1000
 
         self.width_of_window = 1250
         self.height_of_window = 550
@@ -24,21 +28,36 @@ class GUI:
         self.TopFrame = tkinter.Frame(self.mainWindow, width=1250, height=100, borderwidth=1)
         self.TopFrame.pack()
 
-        self.slow = tkinter.Button(self.TopFrame, text="Slow")
-        self.play = tkinter.Button(self.TopFrame, text="Play")
-        self.fast = tkinter.Button(self.TopFrame, text="Fast")
+        def slow():
+            self.delaySpeed *= 2
+            self.cnvs.updateSpeed(self.delaySpeed)
+            print("SLOW")
+
+        def sPause():
+
+            self.isPause = not self.isPause
+
+        def fast():
+            self.delaySpeed /= 2
+            self.cnvs.updateSpeed(self.delaySpeed)
+
+            print(self.delaySpeed)
+
+        self.slow = tkinter.Button(self.TopFrame, text="Slow",command=slow)
+        self.play = tkinter.Button(self.TopFrame, text="Play",command=sPause)
+        self.fast = tkinter.Button(self.TopFrame, text="Fast",command=fast)
 
         self.slow.grid(column=0, row=0)
         self.play.grid(column=1, row=0)
         self.fast.grid(column=2, row=0)
 
-
-
-        # CANVAS -> Aqui ira el Pintar Terminal
-        self.cnvs = Canvas(self.mainWindow)
+        
+        self.cnvs = Canvas(self.mainWindow, self.delaySpeed)
         self.time = tkinter.Label(self.TopFrame, text=self.cnvs.getCurrentTime())
         self.time.grid(column=3, row=0)
-        self.update_timer(1000)
+        self.update_timer(self.delaySpeed)
+
+
 
     def setTraza(self, traza):
         self.traza = traza
@@ -48,7 +67,7 @@ class GUI:
     def update_timer(self,delay):
         self.time = tkinter.Label(self.TopFrame, text=self.cnvs.getCurrentTime())
         self.time.grid(column=3, row=0)
-        self.time.after(1000, lambda :self.update_timer(1000))
+        self.time.after(self.delaySpeed, lambda:self.update_timer(self.delaySpeed))
 
     def run(self):
         self.mainWindow.mainloop()

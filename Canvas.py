@@ -1,11 +1,12 @@
 import tkinter
 import random
 
+# todo -> QUE ES PAUSI DE VERITAT
+# todo -> QUE FAST i SLOW
 
-# TODO mirar como actu cola cada current time ++
 
 class Canvas(tkinter.Tk):
-    def __init__(self, to):
+    def __init__(self, to, delay):
         self.canvas = tkinter.Canvas(to, width=1000, height=450, relief="raised", borderwidth=1)
         self.canvas.pack(side='left')
 
@@ -17,6 +18,7 @@ class Canvas(tkinter.Tk):
         self.traza_where = []
 
 
+        self.delaySpeed = delay
         self.iterator = 0
         self.current_time = 0
         self.cua = 0
@@ -89,7 +91,7 @@ class Canvas(tkinter.Tk):
                 self.estibadors[row, col] = self.canvas.create_rectangle(x1, y1, x2, y2, fill="yellow", tags="rect")
 
     def run (self):
-        self.redraw(1000)
+        self.redraw(self.delaySpeed)
 
     def setTraza (self, traza):
         self.traza = traza
@@ -110,6 +112,9 @@ class Canvas(tkinter.Tk):
         return self.current_time
 
 
+    def updateSpeed (self, speed):
+        self.delaySpeed = speed
+
     def redraw(self, delay):
         self.current_time += 1
         while(len(self.traza) > self.iterator and  str(self.current_time) == self.traza_time[self.iterator]):
@@ -127,16 +132,14 @@ class Canvas(tkinter.Tk):
                         self.canvas.itemconfig(item_id, fill="blue")
                     elif self.traza_where[self.iterator] == "PARKING":
                         col = 0
-                        pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                        # todo actualizar per que funcioni per a 100
-                        if pos >= 25:
+                        pos = int(self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1])
+                        if int(pos) >= 25:
                             col = pos % 25
                             pos = pos / 25
-                        item_id = self.parking[col,int(pos)]
+                        item_id = self.parking[col,pos]
                         self.canvas.itemconfig(item_id, fill="green")
                     else:
                         pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                        # todo actualizar per que funcioni
                         item_id = self.estibadors[0,int(pos)]
                         self.canvas.itemconfig(item_id, fill="blue")
             elif self.traza_what[self.iterator] == "ENCUAR": # queue
@@ -146,16 +149,13 @@ class Canvas(tkinter.Tk):
             else: # INICI SERVEI ESTIBADOR I MAINGATE
                 if self.traza_who[self.iterator][0] == "M":
                     pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                    # todo actualizar per que funcioni
                     item_id = self.maingate[0,int(pos)]
                     self.canvas.itemconfig(item_id, fill="orange")
                 else:
                     pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                    # todo actualizar per que funcioni
                     item_id = self.estibadors[0,int(pos)]
                     self.canvas.itemconfig(item_id, fill="yellow")
 
             # tracament de la traza
             self.iterator += 1
-
         self.canvas.after(delay, lambda : self.redraw(delay))
