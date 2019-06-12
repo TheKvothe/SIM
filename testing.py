@@ -165,7 +165,7 @@ class Testing:
         assert motor.CMCamions[0] == camio3, self.errorcamio3
         assert motor.cuaMainGate == 2, self.errortamanycua2
 
-        print bcolors.OKGREEN + "La cual del maingate funciona correctament" + bcolors.ENDC
+        print bcolors.OKGREEN + "La cua del maingate funciona correctament" + bcolors.ENDC
 
 
     def generationQueueParking(self):
@@ -190,7 +190,7 @@ class Testing:
         assert motor.CPMCamions[0] == camio4, self.errorcamio4
         assert motor.cuaParking == 1, self.errortamanycua1
 
-        print bcolors.OKGREEN + "La cual del parking funciona correctament" + bcolors.ENDC
+        print bcolors.OKGREEN + "La cua del parking funciona correctament" + bcolors.ENDC
 
     def flowEstibadors(self):
         motor = Motor(1,3,2)
@@ -252,4 +252,4 @@ class Testing:
         assert motor.cuaParking == 1,self.errortamanycua1
         assert motor.CPMCamions[0] == camio4, self.errorcamio4
 
-        print bcolors.OKGREEN + "Les finalitzacions del parking funcionen correctamente" + bcolors.ENDC
+        print bcolors.OKGREEN + "Les finalitzacions del parking funcionen correctament" + bcolors.ENDC
