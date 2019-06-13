@@ -12,7 +12,8 @@ class ExcelConversor:
         'initCamio': [],
         'endCamio': [],
         'eventScheduled': [],
-        'eventTime': []
+        'eventTime': [],
+        'numberEntities': []
     }
 
     def __init__(self):
@@ -26,7 +27,8 @@ class ExcelConversor:
             'initCamio':[],
             'endCamio':[],
             'eventScheduled':[],
-            'eventTime':[]
+            'eventTime':[],
+            'numberEntities':[]
         }
 
     def addEsdevenimentMaingate(self, time, typeEvent, numberCamio, numberMaingate, initCamio, endCamio, eventScheduled, eventTime):
@@ -41,6 +43,7 @@ class ExcelConversor:
         #constants
         self.traza['numberParking'].append("-")
         self.traza['numberEstibador'].append("-")
+        self.traza['numberEntities'].append("-")
 
     def addEsdevenimentParking(self, time, typeEvent, numberCamio, numberParking, initCamio, endCamio, eventScheduled, eventTime):
         self.traza['time'].append(time)
@@ -54,6 +57,7 @@ class ExcelConversor:
         # constants
         self.traza['numberMainGate'].append("-")
         self.traza['numberEstibador'].append("-")
+        self.traza['numberEntities'].append("-")
 
     def addEsdevenimentEstibador(self, time, typeEvent, numberCamio, numberEstibador, initCamio, endCamio, eventScheduled, eventTime):
         self.traza['time'].append(time)
@@ -67,9 +71,24 @@ class ExcelConversor:
         # constants
         self.traza['numberParking'].append("-")
         self.traza['numberMainGate'].append("-")
+        self.traza['numberEntities'].append("-")
+
+    def addCua(self, time, nameQueue, cua, camioiD):
+        self.traza['time'].append(time)
+        self.traza['event'].append(nameQueue)
+        self.traza['numberCamio'].append(camioiD)
+        self.traza['numberEntities'].append(cua)
+        # constants
+        self.traza['numberEstibador'].append("-")
+        self.traza['numberMainGate'].append("-")
+        self.traza['numberParking'].append("-")
+        self.traza['initCamio'].append("-")
+        self.traza['endCamio'].append("-")
+        self.traza['eventScheduled'].append("-")
+        self.traza['eventTime'].append("-")
 
     def export(self):
-        auxExport = pand.DataFrame(self.traza, columns=['time', 'event', 'numberCamio', 'numberMainGate', 'numberParking', 'numberEstibador', 'initCamio', 'endCamio', 'eventScheduled', 'eventTime'])
+        auxExport = pand.DataFrame(self.traza, columns=['time', 'event', 'numberCamio', 'numberMainGate', 'numberParking', 'numberEstibador', 'initCamio', 'endCamio', 'eventScheduled', 'eventTime', 'numberEntities'])
         dirname = os.path.dirname(__file__)
         filename = os.path.join(dirname, 'TrazaAExcel.xls')
         print (filename)

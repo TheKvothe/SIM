@@ -50,6 +50,7 @@ class Esdeveniment:
                "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
         nom = self.element.name()
         txt = "		" + str(self.timestamp) + " arribada encuar a "+ nameQueue+ " " + str(cua) + " entitats. Camio " + str(self.camio.iD)
+        self.excelConversor.addCua(self.timestamp, nameQueue, cua, self.camio.iD)
         return txt
 
     def programat(self):

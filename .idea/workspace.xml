@@ -4,7 +4,6 @@
     <list default="true" id="18f4ceb7-42f1-473f-ad97-50241d9411d3" name="Default Changelist" comment="commit motor con el parking funcionando preliminar">
       <change beforePath="$PROJECT_DIR$/Esdeveniments.py" beforeDir="false" afterPath="$PROJECT_DIR$/Esdeveniments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExcelConversor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelConversor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExcelConversor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+            <state relative-caret-position="299">
+              <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -51,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/motor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
+            <state relative-caret-position="299">
+              <caret line="156" column="94" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="94" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -63,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/result.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-392490">
-              <caret line="3243" selection-start-line="3243" selection-end-line="3243" />
+            <state relative-caret-position="-392715">
+              <caret line="3260" selection-start-line="3260" selection-end-line="3260" />
             </state>
           </provider>
         </entry>
@@ -86,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Esdeveniments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state relative-caret-position="118">
+              <caret line="52" column="33" selection-start-line="52" selection-end-line="53" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -149,6 +148,7 @@
       <find>estibadors</find>
       <find>nextArrival</find>
       <find>esd</find>
+      <find>encuar</find>
     </findStrings>
     <replaceStrings>
       <replace>.ENDC)</replace>
@@ -178,8 +178,8 @@
         <option value="$PROJECT_DIR$/testing.py" />
         <option value="$PROJECT_DIR$/Source.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Esdeveniments.py" />
         <option value="$PROJECT_DIR$/motor.py" />
+        <option value="$PROJECT_DIR$/Esdeveniments.py" />
         <option value="$PROJECT_DIR$/ExcelConversor.py" />
       </list>
     </option>
@@ -381,7 +381,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2344371" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2344371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,7 +395,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49713877" weight="0.036144577" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.26385543" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.41018766" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.41018766" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32841823" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -520,15 +520,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/result.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-392490">
-          <caret line="3243" selection-start-line="3243" selection-end-line="3243" />
+        <state relative-caret-position="-392715">
+          <caret line="3260" selection-start-line="3260" selection-end-line="3260" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Esdeveniments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state relative-caret-position="118">
+          <caret line="52" column="33" selection-start-line="52" selection-end-line="53" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -537,8 +537,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/motor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
+        <state relative-caret-position="299">
+          <caret line="156" column="94" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="94" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -547,8 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExcelConversor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        <state relative-caret-position="299">
+          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
