@@ -20,8 +20,16 @@ class Source:
                     self.constanteSumatorio = self.sources[i-1][-1]
                 self.sources[i].append(np.random.random_integers(0, 60) + self.constanteSumatorio)
             self.sources[i].sort()
-        #print (self.sources)
-
+            #print(self.sources[i])
+            j = len(self.sources[i])-1
+            while j > 0:
+                if j == 0 and i != 0:
+                    self.sources[i][j] -= self.sources[i-1][-1]
+                else:
+                    self.sources[i][j] -= self.sources[i][j-1]
+                j -= 1
+            #print(self.sources[i])
+        #exit(0)
 
     def nextArrival(self):
         if self.iteradorCamiones >= len(self.sources[self.iteradorHoras]):

@@ -4,6 +4,7 @@ from PosicioParking import PosicioParking
 from Esdeveniments import Esdeveniment
 from Estibador import Estibador
 from Camio import Camio
+from ExcelConversor import ExcelConversor
 
 
 import constants
@@ -51,6 +52,9 @@ class Motor:
 
     test = 0
 
+    #exportador
+    Conversor = None
+
     def __init__(self, gates, parkings, estibadors):
         self.generador = Source(1)
         self.cuaMainGate = 0
@@ -61,6 +65,7 @@ class Motor:
         self.Parking = [None]*self.numParking
         self.MainGate = [None]*self.numGates
         self.Estibadors = [None]*self.numEstibadors
+        self.conversor = ExcelConversor()
         for i in range(0, self.numGates):
             self.MainGate[i] = MainGate(i)
         for i in range(0, self.numParking):
@@ -85,7 +90,7 @@ class Motor:
         time = self.generador.nextArrival()
 
         camio = Camio(constants.RECO_DESC, self.camio_num,time)
-        esd = Esdeveniment(time, constants.EV_ARRIVAL_MAINGATE, self.generador, camio)
+        esd = Esdeveniment(time, constants.EV_ARRIVAL_MAINGATE, self.generador, camio, self.conversor)
 
         self.esdevenimentsPendents.append(esd)
         self.traza.append(esd.programat())
@@ -112,7 +117,7 @@ class Motor:
                 nextTime += self.currentTime
                 self.camio_num += 1
                 camio = Camio(constants.RECO_DESC, self.camio_num, nextTime)
-                esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, camio)
+                esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, camio, self.conversor)
                 self.esdevenimentsPendents.append(esd)
                 self.traza.append(esd.programat())
 
@@ -128,11 +133,11 @@ class Motor:
                             nextTime = self.Parking[x].nextEndService()
                             nextTime += self.currentTime
 
-                            esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i], esdeveniment.camio)
+                            esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, self.MainGate[i], esdeveniment.camio, self.conversor)
                             self.esdevenimentsPendents.append(esd1)
                             self.traza.append(esd1.programat())
 
-                            esd2 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, self.Parking[x], esdeveniment.camio)
+                            esd2 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, self.Parking[x], esdeveniment.camio, self.conversor)
                             self.esdevenimentsPendents.append(esd2)
                             self.traza.append(esd2.programat())
 
@@ -191,12 +196,12 @@ class Motor:
                     foundEstibador = True
                     nextTime = self.Estibadors[i].nextEndService(esdeveniment.camio.TipusOp)
                     nextTime += self.currentTime
-                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, esdeveniment.camio)
+                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, esdeveniment.element, esdeveniment.camio, self.conversor)
                     self.esdevenimentsPendents.append(esd2)
                     self.traza.append(esd2.programat())
 
                     self.traza.append(self.Estibadors[i].iniciServei(self.currentTime))
-                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, self.Estibadors[i], esdeveniment.camio)
+                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, self.Estibadors[i], esdeveniment.camio, self.conversor)
                     self.esdevenimentsPendents.append(esd2)
                     self.traza.append(esd2.programat())
                     break
@@ -223,7 +228,7 @@ class Motor:
                 self.traza.append(esd2.programat())
 
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
-                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, esdeveniment.element, CamioEsd)
+                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, esdeveniment.element, CamioEsd, self.conversor)
                 self.esdevenimentsPendents.append(esd2)
                 self.traza.append(esd2.programat())
 
@@ -237,14 +242,14 @@ class Motor:
                 CamioEsd = self.CPMCamions.pop(0)
                 self.cuaParking -= 1
 
-                esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, elemento, CamioEsd)
+                esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, elemento, CamioEsd, self.conversor)
                 self.esdevenimentsPendents.append(esd1)
                 self.traza.append(esd1.programat())
 
                 nextTime = esdeveniment.element.nextEndService()
                 nextTime += self.currentTime
 
-                esd3 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, esdeveniment.element, CamioEsd)
+                esd3 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, esdeveniment.element, CamioEsd, self.conversor)
                 self.esdevenimentsPendents.append(esd3)
                 self.traza.append(esd3.programat())
 

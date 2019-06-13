@@ -14,7 +14,7 @@ if __name__ == '__main__':
 	print("	2. Tests")
 	mode = int(input('Mode( 1 o 2 ): '))
 	if mode == 1:
-		motor = Motor(8,100,20)
+		motor = Motor(8,100,200)
 		motor.run()
 		print(motor.esdevenimentsProcessats)
 
