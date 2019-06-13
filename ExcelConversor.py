@@ -35,7 +35,10 @@ class ExcelConversor:
         self.traza['time'].append(time)
         self.traza['event'].append(typeEvent)
         self.traza['numberCamio'].append(numberCamio)
-        self.traza['numberMainGate'].append(numberMaingate)
+        if numberMaingate == "generador":
+            self.traza['numberMainGate'].append("-")
+        else:
+            self.traza['numberMainGate'].append(numberMaingate)
         self.traza['initCamio'].append(initCamio)
         self.traza['endCamio'].append(endCamio)
         self.traza['eventScheduled'].append(eventScheduled)

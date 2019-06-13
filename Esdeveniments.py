@@ -60,9 +60,9 @@ class Esdeveniment:
         txt = "	" + tip[self.tipus] + " programada per a les " + str(self.timestamp) + " Camio " + str(self.camio.iD)
         #falta cambiar esto de aquí para que sepa en qué tiempo sucede esto
         if self.tipus == 0 or self.tipus == 1:
-            self.excelConversor.addEsdevenimentMaingate(self.timestamp, tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, "-", self.timestamp)
+            self.excelConversor.addEsdevenimentMaingate("-", tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, self.timestamp, "-")
         elif self.tipus == 2 or self.tipus == 3:
-            self.excelConversor.addEsdevenimentParking(self.timestamp, tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, self.timestamp, self.timestamp)
+            self.excelConversor.addEsdevenimentParking("-", tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, self.timestamp, "-")
         else:
-            self.excelConversor.addEsdevenimentEstibador(self.timestamp, tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, self.timestamp, self.timestamp)
+            self.excelConversor.addEsdevenimentEstibador("-", tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, self.timestamp, "-")
         return txt
