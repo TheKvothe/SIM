@@ -89,8 +89,8 @@ class Motor:
     def inicialitzarLlistaEsdeveniments(self):
         self.camio_num +=1
         time = self.generador.nextArrival()
-
-        camio = Camio(constants.RECO_DESC, self.camio_num,time)
+        tipOp = self.assignarTipusOperacio()
+        camio = Camio(tipOp, self.camio_num,time)
         esd = Esdeveniment(time, constants.EV_ARRIVAL_MAINGATE, self.generador, camio, self.conversor)
 
         self.esdevenimentsPendents.append(esd)
@@ -128,7 +128,8 @@ class Motor:
 
                 nextTime += self.currentTime
                 self.camio_num += 1
-                camio = Camio(constants.RECO_DESC, self.camio_num, nextTime)
+                tipOp = self.assignarTipusOperacio()
+                camio = Camio(tipOp, self.camio_num, nextTime)
                 esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, camio, self.conversor)
                 self.esdevenimentsPendents.append(esd)
                 self.traza.append(esd.programat())
