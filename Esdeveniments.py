@@ -58,7 +58,6 @@ class Esdeveniment:
                "ARRIBA D'ESTIBADOR", "FISERVEI ESTIBADOR"]
         nom = self.element.name()
         txt = "	" + tip[self.tipus] + " programada per a les " + str(self.timestamp) + " Camio " + str(self.camio.iD)
-        #falta cambiar esto de aquí para que sepa en qué tiempo sucede esto
         if self.tipus == 0 or self.tipus == 1:
             self.excelConversor.addEsdevenimentMaingate("-", tip[self.tipus], self.camio.iD, nom, self.camio.DataCreacio, self.camio.DataFinalitzacio, self.timestamp, "-")
         elif self.tipus == 2 or self.tipus == 3:

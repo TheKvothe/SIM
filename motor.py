@@ -5,7 +5,7 @@ from Esdeveniments import Esdeveniment
 from Estibador import Estibador
 from Camio import Camio
 from ExcelConversor import ExcelConversor
-
+from Grafica import Grafica
 
 import constants
 
@@ -104,10 +104,15 @@ class Motor:
         f = open('result.txt', 'w')
         for i in range(0, len(self.traza)):
             #python3
-            print(self.traza[i],file = f)
+            print(self.traza[i], file = f)
             #python2
             #print >> f, self.traza[i]
-        self.conversor.export()
+
+        #Excel
+        #self.conversor.export()
+
+        #Graficas camiones
+        Grafica.showPlot(Grafica(), self.conversor.traza)
 
 
     def tractarEsdeveniment(self, esdeveniment):
