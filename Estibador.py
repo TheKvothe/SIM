@@ -39,7 +39,7 @@ class Estibador:
 
 #########################################################
 # - Que hay que hacer para el viernes					#
-# - Tema triangulación - Como la debemos aplicar ()		#
+# - Tema triangulacion - Como la debemos aplicar ()		#
 # - Tema visual ?										#
 # - Testing ?											#
 # - MEJORAS ESTIBADOR:									#

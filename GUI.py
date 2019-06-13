@@ -38,9 +38,10 @@ class GUI:
             self.isPaused = not self.isPaused
 
         def fast():
-            self.delaySpeed /= 2
-            self.delaySpeed = int(self.delaySpeed)
-            self.cnvs.updateSpeed(self.delaySpeed)
+            if self.delaySpeed > 1:
+                self.delaySpeed /= 2
+                self.delaySpeed = int(self.delaySpeed)
+                self.cnvs.updateSpeed(self.delaySpeed)
 
         def reset():
             self.cnvs.reset()
@@ -62,7 +63,7 @@ class GUI:
     def setTraza(self, traza):
         self.traza = traza
         self.cnvs.setTraza(traza)
-        self.cnvs.run()
+
 
     def update_timer(self,delay):
         if not self.isPaused:
@@ -71,5 +72,6 @@ class GUI:
         self.time.after(self.delaySpeed, lambda: self.update_timer(self.delaySpeed))
 
     def run(self):
+        self.cnvs.run()
         self.mainWindow.mainloop()
 

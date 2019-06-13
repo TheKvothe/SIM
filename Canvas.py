@@ -1,6 +1,6 @@
 import tkinter
 import random
-
+from time import sleep
 # todo -> QUE ES PAUSI DE VERITAT
 # todo -> QUE FAST i SLOW
 
@@ -10,7 +10,6 @@ class Canvas(tkinter.Tk):
         self.canvas = tkinter.Canvas(to, width=1000, height=450, relief="raised", borderwidth=1)
         self.canvas.pack(side='left')
 
-
         self.isPaused = True
         self.traza = []
         self.traza_who = []
@@ -19,10 +18,9 @@ class Canvas(tkinter.Tk):
         self.traza_oper = []
         self.traza_where = []
 
-
         self.delaySpeed = delay
         self.iterator = 0
-        self.current_time = 0
+        self.current_time = -1
         self.cua = 0
 
         self.rows_pkg = 4
@@ -61,13 +59,14 @@ class Canvas(tkinter.Tk):
         self.xfi_queue = self.xini_queue + 100
         self.yfi_queue = self.yini_queue + 40
         self.canvas.create_rectangle(self.xini_queue, self.yini_queue, self.xfi_queue, self.yfi_queue, fill="white")
-        self.canvas.create_text(self.xini_queue + 50, self.yini_queue + 20, text=self.cua, font="Times 20")
+
+        self.canvas.create_text(self.xini_queue + 50, self.yini_queue - 10, text="CUA MAINGATE")
+        self.queue = self.canvas.create_text(self.xini_queue + 50, self.yini_queue + 20, text=self.cua, font="Times 20")
         self.canvas.create_text(self.init_x_maingate + 30, self.init_y_maingate - 10, text="MAINGATE")
-        self.maingate = {}
         self.setTerminal()
 
-
     def setTerminal(self):
+        self.maingate = {}
         for col in range(self.cols_maingate):
             for row in range(self.rows_maingate):
                 x1 = self.init_x_maingate + col * self.cell_width_maingate
@@ -109,7 +108,10 @@ class Canvas(tkinter.Tk):
             self.traza_what.append(aux[2])
             if len(aux) > 3:
                 self.traza_oper.append(aux[3])
-                self.traza_where.append(aux[4])
+                if len(aux) > 4:
+                    self.traza_where.append(aux[4])
+                else:
+                    self.traza_where.append("-")
             else:
                 self.traza_oper.append("-")
                 self.traza_where.append("-")
@@ -118,7 +120,7 @@ class Canvas(tkinter.Tk):
         return self.current_time
 
     def reset(self):
-        self.current_time = 0
+        self.current_time = -1
         self.iterator = 0
         self.setTerminal()
 
@@ -135,8 +137,13 @@ class Canvas(tkinter.Tk):
                 if self.traza_what[self.iterator] == "EXECUTAR":
                     if self.traza_oper[self.iterator] == "ARRIBADA":
                         if self.traza_where[self.iterator] != "MAINGATE":
-                            pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                            item_id = self.parking[0, int(pos)]
+                            aux = self.traza_who[self.iterator].split(" ")
+                            row = 0
+                            col = int(aux[3])
+                            if int(aux[3]) >= 25:
+                                col = col % 25
+                                row = int(int(aux[3]) / 25)
+                            item_id = self.parking[row,col]
                             self.canvas.itemconfig(item_id, fill="red")
                     else:
                         # cas FISERVE
@@ -145,32 +152,48 @@ class Canvas(tkinter.Tk):
                             item_id = self.maingate[int(pos), 0]
                             self.canvas.itemconfig(item_id, fill="blue")
                         elif self.traza_where[self.iterator] == "PARKING":
-                            col = 0
-                            pos = int(self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1])
-                            if int(pos) >= 25:
-                                col = pos % 25
-                                pos = pos / 25
-                            item_id = self.parking[col, pos]
+                            aux = self.traza_who[self.iterator].split(" ")
+                            row = 0
+                            col = int(aux[3])
+                            if int(aux[3]) >= 25:
+                                col = col % 25
+                                row = int(int(aux[3])/ 25)
+                            item_id = self.parking[row,col]
                             self.canvas.itemconfig(item_id, fill="green")
                         else:
-                            pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                            item_id = self.estibadors[0, int(pos)]
+                            print(self.traza[self.iterator])
+                            aux = self.traza_who[self.iterator].split(" ")
+                            row = 0
+                            col = int(aux[1])
+                            if int(aux[1]) >= 25:
+                                col = col % 25
+                                row = int(int(aux[1]) / 25)
+                            item_id = self.estibadors[row,col]
                             self.canvas.itemconfig(item_id, fill="blue")
                 elif self.traza_what[self.iterator] == "ENCUAR":  # queue
                     if self.traza_who[self.iterator] == "MAINGATE":
-                        self.cua += 1
-                        self.canvas.create_text(self.xini_queue + 50, self.yini_queue + 20, text=self.cua,
-                                                font="Times 20")
+                        self.cua = self.traza_oper[self.iterator]
+                        item_id = self.queue
+                        self.canvas.itemconfig(item_id, text=self.cua)
                 else:  # INICI SERVEI ESTIBADOR I MAINGATE
                     if self.traza_who[self.iterator][0] == "M":
-                        pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                        item_id = self.maingate[0, int(pos)]
+                        aux = self.traza_who[self.iterator].split(" ")
+                        pos = int(aux[1])
+                        item_id = self.maingate[int(pos), 0]
                         self.canvas.itemconfig(item_id, fill="orange")
-                    else:
-                        pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
-                        item_id = self.estibadors[0, int(pos)]
+                    elif self.traza_who[self.iterator][0] == "E":
+                        print(self.traza[self.iterator])
+                        aux = self.traza_who[self.iterator].split(" ")
+                        row = 0
+                        col = int(aux[1])
+                        if int(aux[1]) >= 25:
+                            col = col % 25
+                            row = int(int(aux[1]) / 25)
+                        item_id = self.estibadors[row, col]
                         self.canvas.itemconfig(item_id, fill="yellow")
 
                 # tracament de la traza
+                if (self.delaySpeed == 1000):
+                    sleep(0.01)
                 self.iterator += 1
         self.canvas.after(self.delaySpeed, lambda :self.redraw(self.delaySpeed))
