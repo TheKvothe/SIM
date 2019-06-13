@@ -276,8 +276,4 @@ class Motor:
         if (auxRandom == 4):
             return 2
         else:
-            auxRandom2 = np.random.random_integers(1,2)
-            if auxRandom2 == 1:
-                return 0
-            else:
-                return 1
+            return np.random.random_integers(0,1)
