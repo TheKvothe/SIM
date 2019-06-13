@@ -5,6 +5,7 @@ from Esdeveniments import Esdeveniment
 from Estibador import Estibador
 from Camio import Camio
 from motor import Motor
+from ExcelConversor import ExcelConversor
 
 import constants
 
@@ -27,8 +28,9 @@ class Testing:
     errorcamio4 = ""
     errortamanycua1 = ""
     errortamanycua2 = ""
+    conversor = None
     def __init__(self):
-        print(bcolors.OKBLUE + "Comencen els tests"+ bcolors.ENDC)
+        self.conversor = ExcelConversor()
         self.erroridle = bcolors.FAIL + "Hauria d'estar en IDLE" + bcolors.ENDC
         self.errorbusy = bcolors.FAIL + "Hauria d'estar en BUSY" + bcolors.ENDC
         self.errorcamio3 = bcolors.FAIL + "El primer camio de la cua per entrar a maingate tindria que ser el 3" + bcolors.ENDC
@@ -114,7 +116,7 @@ class Testing:
     def flowAllFree(self):
         motor = Motor(2,2,2)
         camio = Camio(constants.RECO_DESC, 1, 0)
-        esd = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, MainGate(1), camio)
+        esd = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, MainGate(1), camio, self.conversor)
         motor.tractarEsdeveniment(esd)
         assert motor.Parking[0].libre == constants.BUSY, self.errorbusy
 
@@ -128,11 +130,11 @@ class Testing:
         motor = Motor(1,1,1)
 
         camio1 = Camio(constants.RECO_DESC, 1, 0)
-        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1)
+        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd1)
 
         camio2 = Camio(constants.RECO_DESC, 1, 0)
-        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2)
+        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         assert motor.Parking[0].libre == constants.BUSY, self.errorbusy
@@ -147,19 +149,19 @@ class Testing:
         motor = Motor(1,1,1)
 
         camio1 = Camio(constants.RECO_DESC, 1, 0)
-        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE,motor.MainGate[0], camio1)
+        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE,motor.MainGate[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd1)
 
         camio2 = Camio(constants.RECO_DESC, 1, 0)
-        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2)
+        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         camio3 = Camio(constants.RECO_DESC, 1, 0)
-        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio3)
+        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio3,self.conversor)
         motor.tractarEsdeveniment(esd3)
 
         camio4 = Camio(constants.RECO_DESC, 1, 0)
-        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE,motor.MainGate[0], camio4)
+        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE,motor.MainGate[0], camio4,self.conversor)
         motor.tractarEsdeveniment(esd4)
 
         assert motor.CMCamions[0] == camio3, self.errorcamio3
@@ -172,19 +174,19 @@ class Testing:
         motor = Motor(2,3,2)
 
         camio1 = Camio(constants.RECO_DESC, 1, 0)
-        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1)
+        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd1)
 
         camio2 = Camio(constants.RECO_DESC, 1, 0)
-        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2)
+        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         camio3 = Camio(constants.RECO_DESC, 1, 0)
-        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio3)
+        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio3,self.conversor)
         motor.tractarEsdeveniment(esd3)
 
         camio4 = Camio(constants.RECO_DESC, 1, 0)
-        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio4)
+        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio4,self.conversor)
         motor.tractarEsdeveniment(esd4)
 
         assert motor.CPMCamions[0] == camio4, self.errorcamio4
@@ -195,28 +197,28 @@ class Testing:
     def flowEstibadors(self):
         motor = Motor(1,3,2)
         camio1 = Camio(constants.RECO_DESC, 1, 0)
-        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1)
+        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd1)
 
-        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.Parking[0], camio1)
+        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.Parking[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         camio2 = Camio(constants.RECO_DESC, 1, 0)
-        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.MainGate[0], camio2)
+        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.MainGate[0], camio2,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         camio3 = Camio(constants.RECO_DESC, 1, 0)
-        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.MainGate[0], camio3)
+        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.MainGate[0], camio3,self.conversor)
         motor.tractarEsdeveniment(esd3)
 
         camio4 = Camio(constants.RECO_DESC, 1, 0)
-        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.MainGate[0], camio4)
+        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_PARKING, motor.MainGate[0], camio4,self.conversor)
         motor.tractarEsdeveniment(esd4)
 
         assert motor.Estibadors[0].libre == constants.BUSY, self.errorbusy
         assert motor.Estibadors[1].libre == constants.BUSY, self.erroridle
 
-        esd2 = Esdeveniment(0, constants.EV_ENDSERVICE_ESTIBADOR, motor.Estibadors[0], camio1)
+        esd2 = Esdeveniment(0, constants.EV_ENDSERVICE_ESTIBADOR, motor.Estibadors[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         assert motor.Estibadors[0].libre == constants.BUSY, self.errorbusy
@@ -228,25 +230,25 @@ class Testing:
         motor = Motor(2,2,2)
 
         camio1 = Camio(constants.RECO_DESC, 1, 0)
-        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1)
+        esd1 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd1)
 
         camio2 = Camio(constants.RECO_DESC, 1, 0)
-        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2)
+        esd2 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio2,self.conversor)
         motor.tractarEsdeveniment(esd2)
 
         camio3 = Camio(constants.RECO_DESC, 1, 0)
-        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio3)
+        esd3 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio3,self.conversor)
         motor.tractarEsdeveniment(esd3)
 
         camio4 = Camio(constants.RECO_DESC, 1, 0)
-        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio4)
+        esd4 = Esdeveniment(0, constants.EV_ARRIVAL_MAINGATE, motor.MainGate[0], camio4,self.conversor)
         motor.tractarEsdeveniment(esd4)
 
         assert motor.cuaParking == 2, self.errortamanycua1
         assert motor.CPMCamions[0] == camio3, self.errorcamio3
 
-        esd4 = Esdeveniment(0, constants.EV_ENDSERVICE_PARKING, motor.Parking[0], camio4)
+        esd4 = Esdeveniment(0, constants.EV_ENDSERVICE_PARKING, motor.Parking[0], camio4,self.conversor)
         motor.tractarEsdeveniment(esd4)
 
         assert motor.cuaParking == 1,self.errortamanycua1
