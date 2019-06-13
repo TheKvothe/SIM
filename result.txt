@@ -1,0 +1,910 @@
+	ARRIBADA AL MAINGATE programada per a les 0 Camio 1
+0 Generador executa una ARRIBADA AL MAINGATE Camio 1( initCamio = 0 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 0 Camio 2
+    Maingate 0 inicia Servei a 0
+	FISERVEI DEL MAINGATE programada per a les 0 Camio 1
+	ARRIBADA AL PARKING programada per a les 0 Camio 1
+0 Generador executa una ARRIBADA AL MAINGATE Camio 2( initCamio = 0 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 3 Camio 3
+    Maingate 0 inicia Servei a 0
+	FISERVEI DEL MAINGATE programada per a les 0 Camio 2
+	ARRIBADA AL PARKING programada per a les 0 Camio 2
+0 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 1( initCamio = 0 endCamio = 0 )
+0 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 1( initCamio = 0 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 0
+	FISERVEI DEL PARKING programada per a les 26 Camio 1
+    Estibador 0 inicia Servei a 0
+	FISERVEI ESTIBADOR programada per a les 26 Camio 1
+0 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 2( initCamio = 0 endCamio = 0 )
+0 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 2( initCamio = 0 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 0
+	FISERVEI DEL PARKING programada per a les 26 Camio 2
+    Estibador 1 inicia Servei a 0
+	FISERVEI ESTIBADOR programada per a les 26 Camio 2
+3 Generador executa una ARRIBADA AL MAINGATE Camio 3( initCamio = 3 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 7 Camio 4
+    Maingate 0 inicia Servei a 3
+	FISERVEI DEL MAINGATE programada per a les 3 Camio 3
+	ARRIBADA AL PARKING programada per a les 3 Camio 3
+3 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 3( initCamio = 3 endCamio = 0 )
+3 Posicio del parking 2 executa una ARRIBADA AL PARKING Camio 3( initCamio = 3 endCamio = 0 )
+    Posicio del parking 2 inicia Servei a 3
+	FISERVEI DEL PARKING programada per a les 29 Camio 3
+    Estibador 2 inicia Servei a 3
+	FISERVEI ESTIBADOR programada per a les 29 Camio 3
+7 Generador executa una ARRIBADA AL MAINGATE Camio 4( initCamio = 7 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 11 Camio 5
+    Maingate 0 inicia Servei a 7
+	FISERVEI DEL MAINGATE programada per a les 7 Camio 4
+	ARRIBADA AL PARKING programada per a les 7 Camio 4
+7 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 4( initCamio = 7 endCamio = 0 )
+7 Posicio del parking 3 executa una ARRIBADA AL PARKING Camio 4( initCamio = 7 endCamio = 0 )
+    Posicio del parking 3 inicia Servei a 7
+	FISERVEI DEL PARKING programada per a les 33 Camio 4
+    Estibador 3 inicia Servei a 7
+	FISERVEI ESTIBADOR programada per a les 33 Camio 4
+11 Generador executa una ARRIBADA AL MAINGATE Camio 5( initCamio = 11 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 16 Camio 6
+    Maingate 0 inicia Servei a 11
+	FISERVEI DEL MAINGATE programada per a les 11 Camio 5
+	ARRIBADA AL PARKING programada per a les 11 Camio 5
+11 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 5( initCamio = 11 endCamio = 0 )
+11 Posicio del parking 4 executa una ARRIBADA AL PARKING Camio 5( initCamio = 11 endCamio = 0 )
+    Posicio del parking 4 inicia Servei a 11
+	FISERVEI DEL PARKING programada per a les 37 Camio 5
+    Estibador 4 inicia Servei a 11
+	FISERVEI ESTIBADOR programada per a les 37 Camio 5
+16 Generador executa una ARRIBADA AL MAINGATE Camio 6( initCamio = 16 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 21 Camio 7
+    Maingate 0 inicia Servei a 16
+	FISERVEI DEL MAINGATE programada per a les 16 Camio 6
+	ARRIBADA AL PARKING programada per a les 16 Camio 6
+16 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 6( initCamio = 16 endCamio = 0 )
+16 Posicio del parking 5 executa una ARRIBADA AL PARKING Camio 6( initCamio = 16 endCamio = 0 )
+    Posicio del parking 5 inicia Servei a 16
+	FISERVEI DEL PARKING programada per a les 42 Camio 6
+    Estibador 5 inicia Servei a 16
+	FISERVEI ESTIBADOR programada per a les 42 Camio 6
+21 Generador executa una ARRIBADA AL MAINGATE Camio 7( initCamio = 21 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 28 Camio 8
+    Maingate 0 inicia Servei a 21
+	FISERVEI DEL MAINGATE programada per a les 21 Camio 7
+	ARRIBADA AL PARKING programada per a les 21 Camio 7
+21 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 7( initCamio = 21 endCamio = 0 )
+21 Posicio del parking 6 executa una ARRIBADA AL PARKING Camio 7( initCamio = 21 endCamio = 0 )
+    Posicio del parking 6 inicia Servei a 21
+	FISERVEI DEL PARKING programada per a les 47 Camio 7
+    Estibador 6 inicia Servei a 21
+	FISERVEI ESTIBADOR programada per a les 47 Camio 7
+26 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 1( initCamio = 0 endCamio = 0 )
+26 Estibador 0 executa una FISERVEI ESTIBADOR Camio 1( initCamio = 0 endCamio = 26 )
+26 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 2( initCamio = 0 endCamio = 0 )
+26 Estibador 1 executa una FISERVEI ESTIBADOR Camio 2( initCamio = 0 endCamio = 26 )
+28 Generador executa una ARRIBADA AL MAINGATE Camio 8( initCamio = 28 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 37 Camio 9
+    Maingate 0 inicia Servei a 28
+	FISERVEI DEL MAINGATE programada per a les 28 Camio 8
+	ARRIBADA AL PARKING programada per a les 28 Camio 8
+28 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 8( initCamio = 28 endCamio = 0 )
+28 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 8( initCamio = 28 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 28
+	FISERVEI DEL PARKING programada per a les 54 Camio 8
+    Estibador 0 inicia Servei a 28
+	FISERVEI ESTIBADOR programada per a les 54 Camio 8
+29 Posicio del parking 2 executa una FISERVEI DEL PARKING Camio 3( initCamio = 3 endCamio = 0 )
+29 Estibador 2 executa una FISERVEI ESTIBADOR Camio 3( initCamio = 3 endCamio = 29 )
+33 Posicio del parking 3 executa una FISERVEI DEL PARKING Camio 4( initCamio = 7 endCamio = 0 )
+33 Estibador 3 executa una FISERVEI ESTIBADOR Camio 4( initCamio = 7 endCamio = 33 )
+37 Posicio del parking 4 executa una FISERVEI DEL PARKING Camio 5( initCamio = 11 endCamio = 0 )
+37 Estibador 4 executa una FISERVEI ESTIBADOR Camio 5( initCamio = 11 endCamio = 37 )
+37 Generador executa una ARRIBADA AL MAINGATE Camio 9( initCamio = 37 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 46 Camio 10
+    Maingate 0 inicia Servei a 37
+	FISERVEI DEL MAINGATE programada per a les 37 Camio 9
+	ARRIBADA AL PARKING programada per a les 37 Camio 9
+37 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 9( initCamio = 37 endCamio = 0 )
+37 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 9( initCamio = 37 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 37
+	FISERVEI DEL PARKING programada per a les 63 Camio 9
+    Estibador 1 inicia Servei a 37
+	FISERVEI ESTIBADOR programada per a les 63 Camio 9
+42 Posicio del parking 5 executa una FISERVEI DEL PARKING Camio 6( initCamio = 16 endCamio = 0 )
+42 Estibador 5 executa una FISERVEI ESTIBADOR Camio 6( initCamio = 16 endCamio = 42 )
+46 Generador executa una ARRIBADA AL MAINGATE Camio 10( initCamio = 46 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 57 Camio 11
+    Maingate 0 inicia Servei a 46
+	FISERVEI DEL MAINGATE programada per a les 46 Camio 10
+	ARRIBADA AL PARKING programada per a les 46 Camio 10
+46 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 10( initCamio = 46 endCamio = 0 )
+46 Posicio del parking 2 executa una ARRIBADA AL PARKING Camio 10( initCamio = 46 endCamio = 0 )
+    Posicio del parking 2 inicia Servei a 46
+	FISERVEI DEL PARKING programada per a les 72 Camio 10
+    Estibador 2 inicia Servei a 46
+	FISERVEI ESTIBADOR programada per a les 72 Camio 10
+47 Posicio del parking 6 executa una FISERVEI DEL PARKING Camio 7( initCamio = 21 endCamio = 0 )
+47 Estibador 6 executa una FISERVEI ESTIBADOR Camio 7( initCamio = 21 endCamio = 47 )
+54 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 8( initCamio = 28 endCamio = 0 )
+54 Estibador 0 executa una FISERVEI ESTIBADOR Camio 8( initCamio = 28 endCamio = 54 )
+57 Generador executa una ARRIBADA AL MAINGATE Camio 11( initCamio = 57 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 70 Camio 12
+    Maingate 0 inicia Servei a 57
+	FISERVEI DEL MAINGATE programada per a les 57 Camio 11
+	ARRIBADA AL PARKING programada per a les 57 Camio 11
+57 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 11( initCamio = 57 endCamio = 0 )
+57 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 11( initCamio = 57 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 57
+	FISERVEI DEL PARKING programada per a les 83 Camio 11
+    Estibador 0 inicia Servei a 57
+	FISERVEI ESTIBADOR programada per a les 83 Camio 11
+63 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 9( initCamio = 37 endCamio = 0 )
+63 Estibador 1 executa una FISERVEI ESTIBADOR Camio 9( initCamio = 37 endCamio = 63 )
+70 Generador executa una ARRIBADA AL MAINGATE Camio 12( initCamio = 70 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 84 Camio 13
+    Maingate 0 inicia Servei a 70
+	FISERVEI DEL MAINGATE programada per a les 70 Camio 12
+	ARRIBADA AL PARKING programada per a les 70 Camio 12
+70 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 12( initCamio = 70 endCamio = 0 )
+70 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 12( initCamio = 70 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 70
+	FISERVEI DEL PARKING programada per a les 96 Camio 12
+    Estibador 1 inicia Servei a 70
+	FISERVEI ESTIBADOR programada per a les 96 Camio 12
+72 Posicio del parking 2 executa una FISERVEI DEL PARKING Camio 10( initCamio = 46 endCamio = 0 )
+72 Estibador 2 executa una FISERVEI ESTIBADOR Camio 10( initCamio = 46 endCamio = 72 )
+83 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 11( initCamio = 57 endCamio = 0 )
+83 Estibador 0 executa una FISERVEI ESTIBADOR Camio 11( initCamio = 57 endCamio = 83 )
+84 Generador executa una ARRIBADA AL MAINGATE Camio 13( initCamio = 84 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 99 Camio 14
+    Maingate 0 inicia Servei a 84
+	FISERVEI DEL MAINGATE programada per a les 84 Camio 13
+	ARRIBADA AL PARKING programada per a les 84 Camio 13
+84 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 13( initCamio = 84 endCamio = 0 )
+84 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 13( initCamio = 84 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 84
+	FISERVEI DEL PARKING programada per a les 110 Camio 13
+    Estibador 0 inicia Servei a 84
+	FISERVEI ESTIBADOR programada per a les 110 Camio 13
+96 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 12( initCamio = 70 endCamio = 0 )
+96 Estibador 1 executa una FISERVEI ESTIBADOR Camio 12( initCamio = 70 endCamio = 96 )
+99 Generador executa una ARRIBADA AL MAINGATE Camio 14( initCamio = 99 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 114 Camio 15
+    Maingate 0 inicia Servei a 99
+	FISERVEI DEL MAINGATE programada per a les 99 Camio 14
+	ARRIBADA AL PARKING programada per a les 99 Camio 14
+99 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 14( initCamio = 99 endCamio = 0 )
+99 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 14( initCamio = 99 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 99
+	FISERVEI DEL PARKING programada per a les 125 Camio 14
+    Estibador 1 inicia Servei a 99
+	FISERVEI ESTIBADOR programada per a les 125 Camio 14
+110 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 13( initCamio = 84 endCamio = 0 )
+110 Estibador 0 executa una FISERVEI ESTIBADOR Camio 13( initCamio = 84 endCamio = 110 )
+114 Generador executa una ARRIBADA AL MAINGATE Camio 15( initCamio = 114 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 130 Camio 16
+    Maingate 0 inicia Servei a 114
+	FISERVEI DEL MAINGATE programada per a les 114 Camio 15
+	ARRIBADA AL PARKING programada per a les 114 Camio 15
+114 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 15( initCamio = 114 endCamio = 0 )
+114 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 15( initCamio = 114 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 114
+	FISERVEI DEL PARKING programada per a les 140 Camio 15
+    Estibador 0 inicia Servei a 114
+	FISERVEI ESTIBADOR programada per a les 140 Camio 15
+125 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 14( initCamio = 99 endCamio = 0 )
+125 Estibador 1 executa una FISERVEI ESTIBADOR Camio 14( initCamio = 99 endCamio = 125 )
+130 Generador executa una ARRIBADA AL MAINGATE Camio 16( initCamio = 130 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 147 Camio 17
+    Maingate 0 inicia Servei a 130
+	FISERVEI DEL MAINGATE programada per a les 130 Camio 16
+	ARRIBADA AL PARKING programada per a les 130 Camio 16
+130 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 16( initCamio = 130 endCamio = 0 )
+130 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 16( initCamio = 130 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 130
+	FISERVEI DEL PARKING programada per a les 156 Camio 16
+    Estibador 1 inicia Servei a 130
+	FISERVEI ESTIBADOR programada per a les 156 Camio 16
+140 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 15( initCamio = 114 endCamio = 0 )
+140 Estibador 0 executa una FISERVEI ESTIBADOR Camio 15( initCamio = 114 endCamio = 140 )
+147 Generador executa una ARRIBADA AL MAINGATE Camio 17( initCamio = 147 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 164 Camio 18
+    Maingate 0 inicia Servei a 147
+	FISERVEI DEL MAINGATE programada per a les 147 Camio 17
+	ARRIBADA AL PARKING programada per a les 147 Camio 17
+147 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 17( initCamio = 147 endCamio = 0 )
+147 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 17( initCamio = 147 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 147
+	FISERVEI DEL PARKING programada per a les 173 Camio 17
+    Estibador 0 inicia Servei a 147
+	FISERVEI ESTIBADOR programada per a les 173 Camio 17
+156 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 16( initCamio = 130 endCamio = 0 )
+156 Estibador 1 executa una FISERVEI ESTIBADOR Camio 16( initCamio = 130 endCamio = 156 )
+164 Generador executa una ARRIBADA AL MAINGATE Camio 18( initCamio = 164 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 182 Camio 19
+    Maingate 0 inicia Servei a 164
+	FISERVEI DEL MAINGATE programada per a les 164 Camio 18
+	ARRIBADA AL PARKING programada per a les 164 Camio 18
+164 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 18( initCamio = 164 endCamio = 0 )
+164 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 18( initCamio = 164 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 164
+	FISERVEI DEL PARKING programada per a les 190 Camio 18
+    Estibador 1 inicia Servei a 164
+	FISERVEI ESTIBADOR programada per a les 190 Camio 18
+173 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 17( initCamio = 147 endCamio = 0 )
+173 Estibador 0 executa una FISERVEI ESTIBADOR Camio 17( initCamio = 147 endCamio = 173 )
+182 Generador executa una ARRIBADA AL MAINGATE Camio 19( initCamio = 182 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 201 Camio 20
+    Maingate 0 inicia Servei a 182
+	FISERVEI DEL MAINGATE programada per a les 182 Camio 19
+	ARRIBADA AL PARKING programada per a les 182 Camio 19
+182 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 19( initCamio = 182 endCamio = 0 )
+182 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 19( initCamio = 182 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 182
+	FISERVEI DEL PARKING programada per a les 208 Camio 19
+    Estibador 0 inicia Servei a 182
+	FISERVEI ESTIBADOR programada per a les 208 Camio 19
+190 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 18( initCamio = 164 endCamio = 0 )
+190 Estibador 1 executa una FISERVEI ESTIBADOR Camio 18( initCamio = 164 endCamio = 190 )
+201 Generador executa una ARRIBADA AL MAINGATE Camio 20( initCamio = 201 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 220 Camio 21
+    Maingate 0 inicia Servei a 201
+	FISERVEI DEL MAINGATE programada per a les 201 Camio 20
+	ARRIBADA AL PARKING programada per a les 201 Camio 20
+201 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 20( initCamio = 201 endCamio = 0 )
+201 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 20( initCamio = 201 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 201
+	FISERVEI DEL PARKING programada per a les 227 Camio 20
+    Estibador 1 inicia Servei a 201
+	FISERVEI ESTIBADOR programada per a les 227 Camio 20
+208 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 19( initCamio = 182 endCamio = 0 )
+208 Estibador 0 executa una FISERVEI ESTIBADOR Camio 19( initCamio = 182 endCamio = 208 )
+220 Generador executa una ARRIBADA AL MAINGATE Camio 21( initCamio = 220 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 240 Camio 22
+    Maingate 0 inicia Servei a 220
+	FISERVEI DEL MAINGATE programada per a les 220 Camio 21
+	ARRIBADA AL PARKING programada per a les 220 Camio 21
+220 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 21( initCamio = 220 endCamio = 0 )
+220 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 21( initCamio = 220 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 220
+	FISERVEI DEL PARKING programada per a les 246 Camio 21
+    Estibador 0 inicia Servei a 220
+	FISERVEI ESTIBADOR programada per a les 246 Camio 21
+227 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 20( initCamio = 201 endCamio = 0 )
+227 Estibador 1 executa una FISERVEI ESTIBADOR Camio 20( initCamio = 201 endCamio = 227 )
+240 Generador executa una ARRIBADA AL MAINGATE Camio 22( initCamio = 240 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 262 Camio 23
+    Maingate 0 inicia Servei a 240
+	FISERVEI DEL MAINGATE programada per a les 240 Camio 22
+	ARRIBADA AL PARKING programada per a les 240 Camio 22
+240 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 22( initCamio = 240 endCamio = 0 )
+240 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 22( initCamio = 240 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 240
+	FISERVEI DEL PARKING programada per a les 266 Camio 22
+    Estibador 1 inicia Servei a 240
+	FISERVEI ESTIBADOR programada per a les 266 Camio 22
+246 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 21( initCamio = 220 endCamio = 0 )
+246 Estibador 0 executa una FISERVEI ESTIBADOR Camio 21( initCamio = 220 endCamio = 246 )
+262 Generador executa una ARRIBADA AL MAINGATE Camio 23( initCamio = 262 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 284 Camio 24
+    Maingate 0 inicia Servei a 262
+	FISERVEI DEL MAINGATE programada per a les 262 Camio 23
+	ARRIBADA AL PARKING programada per a les 262 Camio 23
+262 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 23( initCamio = 262 endCamio = 0 )
+262 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 23( initCamio = 262 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 262
+	FISERVEI DEL PARKING programada per a les 288 Camio 23
+    Estibador 0 inicia Servei a 262
+	FISERVEI ESTIBADOR programada per a les 288 Camio 23
+266 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 22( initCamio = 240 endCamio = 0 )
+266 Estibador 1 executa una FISERVEI ESTIBADOR Camio 22( initCamio = 240 endCamio = 266 )
+284 Generador executa una ARRIBADA AL MAINGATE Camio 24( initCamio = 284 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 308 Camio 25
+    Maingate 0 inicia Servei a 284
+	FISERVEI DEL MAINGATE programada per a les 284 Camio 24
+	ARRIBADA AL PARKING programada per a les 284 Camio 24
+284 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 24( initCamio = 284 endCamio = 0 )
+284 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 24( initCamio = 284 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 284
+	FISERVEI DEL PARKING programada per a les 310 Camio 24
+    Estibador 1 inicia Servei a 284
+	FISERVEI ESTIBADOR programada per a les 310 Camio 24
+288 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 23( initCamio = 262 endCamio = 0 )
+288 Estibador 0 executa una FISERVEI ESTIBADOR Camio 23( initCamio = 262 endCamio = 288 )
+308 Generador executa una ARRIBADA AL MAINGATE Camio 25( initCamio = 308 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 332 Camio 26
+    Maingate 0 inicia Servei a 308
+	FISERVEI DEL MAINGATE programada per a les 308 Camio 25
+	ARRIBADA AL PARKING programada per a les 308 Camio 25
+308 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 25( initCamio = 308 endCamio = 0 )
+308 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 25( initCamio = 308 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 308
+	FISERVEI DEL PARKING programada per a les 334 Camio 25
+    Estibador 0 inicia Servei a 308
+	FISERVEI ESTIBADOR programada per a les 334 Camio 25
+310 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 24( initCamio = 284 endCamio = 0 )
+310 Estibador 1 executa una FISERVEI ESTIBADOR Camio 24( initCamio = 284 endCamio = 310 )
+332 Generador executa una ARRIBADA AL MAINGATE Camio 26( initCamio = 332 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 357 Camio 27
+    Maingate 0 inicia Servei a 332
+	FISERVEI DEL MAINGATE programada per a les 332 Camio 26
+	ARRIBADA AL PARKING programada per a les 332 Camio 26
+332 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 26( initCamio = 332 endCamio = 0 )
+332 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 26( initCamio = 332 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 332
+	FISERVEI DEL PARKING programada per a les 358 Camio 26
+    Estibador 1 inicia Servei a 332
+	FISERVEI ESTIBADOR programada per a les 358 Camio 26
+334 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 25( initCamio = 308 endCamio = 0 )
+334 Estibador 0 executa una FISERVEI ESTIBADOR Camio 25( initCamio = 308 endCamio = 334 )
+357 Generador executa una ARRIBADA AL MAINGATE Camio 27( initCamio = 357 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 382 Camio 28
+    Maingate 0 inicia Servei a 357
+	FISERVEI DEL MAINGATE programada per a les 357 Camio 27
+	ARRIBADA AL PARKING programada per a les 357 Camio 27
+357 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 27( initCamio = 357 endCamio = 0 )
+357 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 27( initCamio = 357 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 357
+	FISERVEI DEL PARKING programada per a les 383 Camio 27
+    Estibador 0 inicia Servei a 357
+	FISERVEI ESTIBADOR programada per a les 383 Camio 27
+358 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 26( initCamio = 332 endCamio = 0 )
+358 Estibador 1 executa una FISERVEI ESTIBADOR Camio 26( initCamio = 332 endCamio = 358 )
+382 Generador executa una ARRIBADA AL MAINGATE Camio 28( initCamio = 382 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 409 Camio 29
+    Maingate 0 inicia Servei a 382
+	FISERVEI DEL MAINGATE programada per a les 382 Camio 28
+	ARRIBADA AL PARKING programada per a les 382 Camio 28
+382 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 28( initCamio = 382 endCamio = 0 )
+382 Posicio del parking 1 executa una ARRIBADA AL PARKING Camio 28( initCamio = 382 endCamio = 0 )
+    Posicio del parking 1 inicia Servei a 382
+	FISERVEI DEL PARKING programada per a les 408 Camio 28
+    Estibador 1 inicia Servei a 382
+	FISERVEI ESTIBADOR programada per a les 408 Camio 28
+383 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 27( initCamio = 357 endCamio = 0 )
+383 Estibador 0 executa una FISERVEI ESTIBADOR Camio 27( initCamio = 357 endCamio = 383 )
+408 Posicio del parking 1 executa una FISERVEI DEL PARKING Camio 28( initCamio = 382 endCamio = 0 )
+408 Estibador 1 executa una FISERVEI ESTIBADOR Camio 28( initCamio = 382 endCamio = 408 )
+409 Generador executa una ARRIBADA AL MAINGATE Camio 29( initCamio = 409 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 436 Camio 30
+    Maingate 0 inicia Servei a 409
+	FISERVEI DEL MAINGATE programada per a les 409 Camio 29
+	ARRIBADA AL PARKING programada per a les 409 Camio 29
+409 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 29( initCamio = 409 endCamio = 0 )
+409 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 29( initCamio = 409 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 409
+	FISERVEI DEL PARKING programada per a les 435 Camio 29
+    Estibador 0 inicia Servei a 409
+	FISERVEI ESTIBADOR programada per a les 435 Camio 29
+435 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 29( initCamio = 409 endCamio = 0 )
+435 Estibador 0 executa una FISERVEI ESTIBADOR Camio 29( initCamio = 409 endCamio = 435 )
+436 Generador executa una ARRIBADA AL MAINGATE Camio 30( initCamio = 436 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 464 Camio 31
+    Maingate 0 inicia Servei a 436
+	FISERVEI DEL MAINGATE programada per a les 436 Camio 30
+	ARRIBADA AL PARKING programada per a les 436 Camio 30
+436 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 30( initCamio = 436 endCamio = 0 )
+436 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 30( initCamio = 436 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 436
+	FISERVEI DEL PARKING programada per a les 462 Camio 30
+    Estibador 0 inicia Servei a 436
+	FISERVEI ESTIBADOR programada per a les 462 Camio 30
+462 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 30( initCamio = 436 endCamio = 0 )
+462 Estibador 0 executa una FISERVEI ESTIBADOR Camio 30( initCamio = 436 endCamio = 462 )
+464 Generador executa una ARRIBADA AL MAINGATE Camio 31( initCamio = 464 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 492 Camio 32
+    Maingate 0 inicia Servei a 464
+	FISERVEI DEL MAINGATE programada per a les 464 Camio 31
+	ARRIBADA AL PARKING programada per a les 464 Camio 31
+464 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 31( initCamio = 464 endCamio = 0 )
+464 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 31( initCamio = 464 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 464
+	FISERVEI DEL PARKING programada per a les 490 Camio 31
+    Estibador 0 inicia Servei a 464
+	FISERVEI ESTIBADOR programada per a les 490 Camio 31
+490 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 31( initCamio = 464 endCamio = 0 )
+490 Estibador 0 executa una FISERVEI ESTIBADOR Camio 31( initCamio = 464 endCamio = 490 )
+492 Generador executa una ARRIBADA AL MAINGATE Camio 32( initCamio = 492 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 521 Camio 33
+    Maingate 0 inicia Servei a 492
+	FISERVEI DEL MAINGATE programada per a les 492 Camio 32
+	ARRIBADA AL PARKING programada per a les 492 Camio 32
+492 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 32( initCamio = 492 endCamio = 0 )
+492 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 32( initCamio = 492 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 492
+	FISERVEI DEL PARKING programada per a les 518 Camio 32
+    Estibador 0 inicia Servei a 492
+	FISERVEI ESTIBADOR programada per a les 518 Camio 32
+518 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 32( initCamio = 492 endCamio = 0 )
+518 Estibador 0 executa una FISERVEI ESTIBADOR Camio 32( initCamio = 492 endCamio = 518 )
+521 Generador executa una ARRIBADA AL MAINGATE Camio 33( initCamio = 521 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 550 Camio 34
+    Maingate 0 inicia Servei a 521
+	FISERVEI DEL MAINGATE programada per a les 521 Camio 33
+	ARRIBADA AL PARKING programada per a les 521 Camio 33
+521 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 33( initCamio = 521 endCamio = 0 )
+521 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 33( initCamio = 521 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 521
+	FISERVEI DEL PARKING programada per a les 547 Camio 33
+    Estibador 0 inicia Servei a 521
+	FISERVEI ESTIBADOR programada per a les 547 Camio 33
+547 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 33( initCamio = 521 endCamio = 0 )
+547 Estibador 0 executa una FISERVEI ESTIBADOR Camio 33( initCamio = 521 endCamio = 547 )
+550 Generador executa una ARRIBADA AL MAINGATE Camio 34( initCamio = 550 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 580 Camio 35
+    Maingate 0 inicia Servei a 550
+	FISERVEI DEL MAINGATE programada per a les 550 Camio 34
+	ARRIBADA AL PARKING programada per a les 550 Camio 34
+550 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 34( initCamio = 550 endCamio = 0 )
+550 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 34( initCamio = 550 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 550
+	FISERVEI DEL PARKING programada per a les 576 Camio 34
+    Estibador 0 inicia Servei a 550
+	FISERVEI ESTIBADOR programada per a les 576 Camio 34
+576 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 34( initCamio = 550 endCamio = 0 )
+576 Estibador 0 executa una FISERVEI ESTIBADOR Camio 34( initCamio = 550 endCamio = 576 )
+580 Generador executa una ARRIBADA AL MAINGATE Camio 35( initCamio = 580 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 612 Camio 36
+    Maingate 0 inicia Servei a 580
+	FISERVEI DEL MAINGATE programada per a les 580 Camio 35
+	ARRIBADA AL PARKING programada per a les 580 Camio 35
+580 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 35( initCamio = 580 endCamio = 0 )
+580 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 35( initCamio = 580 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 580
+	FISERVEI DEL PARKING programada per a les 606 Camio 35
+    Estibador 0 inicia Servei a 580
+	FISERVEI ESTIBADOR programada per a les 606 Camio 35
+606 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 35( initCamio = 580 endCamio = 0 )
+606 Estibador 0 executa una FISERVEI ESTIBADOR Camio 35( initCamio = 580 endCamio = 606 )
+612 Generador executa una ARRIBADA AL MAINGATE Camio 36( initCamio = 612 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 644 Camio 37
+    Maingate 0 inicia Servei a 612
+	FISERVEI DEL MAINGATE programada per a les 612 Camio 36
+	ARRIBADA AL PARKING programada per a les 612 Camio 36
+612 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 36( initCamio = 612 endCamio = 0 )
+612 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 36( initCamio = 612 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 612
+	FISERVEI DEL PARKING programada per a les 638 Camio 36
+    Estibador 0 inicia Servei a 612
+	FISERVEI ESTIBADOR programada per a les 638 Camio 36
+638 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 36( initCamio = 612 endCamio = 0 )
+638 Estibador 0 executa una FISERVEI ESTIBADOR Camio 36( initCamio = 612 endCamio = 638 )
+644 Generador executa una ARRIBADA AL MAINGATE Camio 37( initCamio = 644 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 678 Camio 38
+    Maingate 0 inicia Servei a 644
+	FISERVEI DEL MAINGATE programada per a les 644 Camio 37
+	ARRIBADA AL PARKING programada per a les 644 Camio 37
+644 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 37( initCamio = 644 endCamio = 0 )
+644 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 37( initCamio = 644 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 644
+	FISERVEI DEL PARKING programada per a les 670 Camio 37
+    Estibador 0 inicia Servei a 644
+	FISERVEI ESTIBADOR programada per a les 670 Camio 37
+670 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 37( initCamio = 644 endCamio = 0 )
+670 Estibador 0 executa una FISERVEI ESTIBADOR Camio 37( initCamio = 644 endCamio = 670 )
+678 Generador executa una ARRIBADA AL MAINGATE Camio 38( initCamio = 678 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 712 Camio 39
+    Maingate 0 inicia Servei a 678
+	FISERVEI DEL MAINGATE programada per a les 678 Camio 38
+	ARRIBADA AL PARKING programada per a les 678 Camio 38
+678 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 38( initCamio = 678 endCamio = 0 )
+678 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 38( initCamio = 678 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 678
+	FISERVEI DEL PARKING programada per a les 704 Camio 38
+    Estibador 0 inicia Servei a 678
+	FISERVEI ESTIBADOR programada per a les 704 Camio 38
+704 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 38( initCamio = 678 endCamio = 0 )
+704 Estibador 0 executa una FISERVEI ESTIBADOR Camio 38( initCamio = 678 endCamio = 704 )
+712 Generador executa una ARRIBADA AL MAINGATE Camio 39( initCamio = 712 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 747 Camio 40
+    Maingate 0 inicia Servei a 712
+	FISERVEI DEL MAINGATE programada per a les 712 Camio 39
+	ARRIBADA AL PARKING programada per a les 712 Camio 39
+712 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 39( initCamio = 712 endCamio = 0 )
+712 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 39( initCamio = 712 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 712
+	FISERVEI DEL PARKING programada per a les 738 Camio 39
+    Estibador 0 inicia Servei a 712
+	FISERVEI ESTIBADOR programada per a les 738 Camio 39
+738 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 39( initCamio = 712 endCamio = 0 )
+738 Estibador 0 executa una FISERVEI ESTIBADOR Camio 39( initCamio = 712 endCamio = 738 )
+747 Generador executa una ARRIBADA AL MAINGATE Camio 40( initCamio = 747 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 782 Camio 41
+    Maingate 0 inicia Servei a 747
+	FISERVEI DEL MAINGATE programada per a les 747 Camio 40
+	ARRIBADA AL PARKING programada per a les 747 Camio 40
+747 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 40( initCamio = 747 endCamio = 0 )
+747 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 40( initCamio = 747 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 747
+	FISERVEI DEL PARKING programada per a les 773 Camio 40
+    Estibador 0 inicia Servei a 747
+	FISERVEI ESTIBADOR programada per a les 773 Camio 40
+773 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 40( initCamio = 747 endCamio = 0 )
+773 Estibador 0 executa una FISERVEI ESTIBADOR Camio 40( initCamio = 747 endCamio = 773 )
+782 Generador executa una ARRIBADA AL MAINGATE Camio 41( initCamio = 782 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 817 Camio 42
+    Maingate 0 inicia Servei a 782
+	FISERVEI DEL MAINGATE programada per a les 782 Camio 41
+	ARRIBADA AL PARKING programada per a les 782 Camio 41
+782 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 41( initCamio = 782 endCamio = 0 )
+782 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 41( initCamio = 782 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 782
+	FISERVEI DEL PARKING programada per a les 808 Camio 41
+    Estibador 0 inicia Servei a 782
+	FISERVEI ESTIBADOR programada per a les 808 Camio 41
+808 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 41( initCamio = 782 endCamio = 0 )
+808 Estibador 0 executa una FISERVEI ESTIBADOR Camio 41( initCamio = 782 endCamio = 808 )
+817 Generador executa una ARRIBADA AL MAINGATE Camio 42( initCamio = 817 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 853 Camio 43
+    Maingate 0 inicia Servei a 817
+	FISERVEI DEL MAINGATE programada per a les 817 Camio 42
+	ARRIBADA AL PARKING programada per a les 817 Camio 42
+817 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 42( initCamio = 817 endCamio = 0 )
+817 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 42( initCamio = 817 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 817
+	FISERVEI DEL PARKING programada per a les 843 Camio 42
+    Estibador 0 inicia Servei a 817
+	FISERVEI ESTIBADOR programada per a les 843 Camio 42
+843 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 42( initCamio = 817 endCamio = 0 )
+843 Estibador 0 executa una FISERVEI ESTIBADOR Camio 42( initCamio = 817 endCamio = 843 )
+853 Generador executa una ARRIBADA AL MAINGATE Camio 43( initCamio = 853 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 890 Camio 44
+    Maingate 0 inicia Servei a 853
+	FISERVEI DEL MAINGATE programada per a les 853 Camio 43
+	ARRIBADA AL PARKING programada per a les 853 Camio 43
+853 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 43( initCamio = 853 endCamio = 0 )
+853 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 43( initCamio = 853 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 853
+	FISERVEI DEL PARKING programada per a les 879 Camio 43
+    Estibador 0 inicia Servei a 853
+	FISERVEI ESTIBADOR programada per a les 879 Camio 43
+879 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 43( initCamio = 853 endCamio = 0 )
+879 Estibador 0 executa una FISERVEI ESTIBADOR Camio 43( initCamio = 853 endCamio = 879 )
+890 Generador executa una ARRIBADA AL MAINGATE Camio 44( initCamio = 890 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 928 Camio 45
+    Maingate 0 inicia Servei a 890
+	FISERVEI DEL MAINGATE programada per a les 890 Camio 44
+	ARRIBADA AL PARKING programada per a les 890 Camio 44
+890 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 44( initCamio = 890 endCamio = 0 )
+890 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 44( initCamio = 890 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 890
+	FISERVEI DEL PARKING programada per a les 916 Camio 44
+    Estibador 0 inicia Servei a 890
+	FISERVEI ESTIBADOR programada per a les 916 Camio 44
+916 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 44( initCamio = 890 endCamio = 0 )
+916 Estibador 0 executa una FISERVEI ESTIBADOR Camio 44( initCamio = 890 endCamio = 916 )
+928 Generador executa una ARRIBADA AL MAINGATE Camio 45( initCamio = 928 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 966 Camio 46
+    Maingate 0 inicia Servei a 928
+	FISERVEI DEL MAINGATE programada per a les 928 Camio 45
+	ARRIBADA AL PARKING programada per a les 928 Camio 45
+928 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 45( initCamio = 928 endCamio = 0 )
+928 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 45( initCamio = 928 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 928
+	FISERVEI DEL PARKING programada per a les 954 Camio 45
+    Estibador 0 inicia Servei a 928
+	FISERVEI ESTIBADOR programada per a les 954 Camio 45
+954 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 45( initCamio = 928 endCamio = 0 )
+954 Estibador 0 executa una FISERVEI ESTIBADOR Camio 45( initCamio = 928 endCamio = 954 )
+966 Generador executa una ARRIBADA AL MAINGATE Camio 46( initCamio = 966 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1004 Camio 47
+    Maingate 0 inicia Servei a 966
+	FISERVEI DEL MAINGATE programada per a les 966 Camio 46
+	ARRIBADA AL PARKING programada per a les 966 Camio 46
+966 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 46( initCamio = 966 endCamio = 0 )
+966 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 46( initCamio = 966 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 966
+	FISERVEI DEL PARKING programada per a les 992 Camio 46
+    Estibador 0 inicia Servei a 966
+	FISERVEI ESTIBADOR programada per a les 992 Camio 46
+992 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 46( initCamio = 966 endCamio = 0 )
+992 Estibador 0 executa una FISERVEI ESTIBADOR Camio 46( initCamio = 966 endCamio = 992 )
+1004 Generador executa una ARRIBADA AL MAINGATE Camio 47( initCamio = 1004 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1042 Camio 48
+    Maingate 0 inicia Servei a 1004
+	FISERVEI DEL MAINGATE programada per a les 1004 Camio 47
+	ARRIBADA AL PARKING programada per a les 1004 Camio 47
+1004 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 47( initCamio = 1004 endCamio = 0 )
+1004 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 47( initCamio = 1004 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1004
+	FISERVEI DEL PARKING programada per a les 1030 Camio 47
+    Estibador 0 inicia Servei a 1004
+	FISERVEI ESTIBADOR programada per a les 1030 Camio 47
+1030 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 47( initCamio = 1004 endCamio = 0 )
+1030 Estibador 0 executa una FISERVEI ESTIBADOR Camio 47( initCamio = 1004 endCamio = 1030 )
+1042 Generador executa una ARRIBADA AL MAINGATE Camio 48( initCamio = 1042 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1080 Camio 49
+    Maingate 0 inicia Servei a 1042
+	FISERVEI DEL MAINGATE programada per a les 1042 Camio 48
+	ARRIBADA AL PARKING programada per a les 1042 Camio 48
+1042 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 48( initCamio = 1042 endCamio = 0 )
+1042 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 48( initCamio = 1042 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1042
+	FISERVEI DEL PARKING programada per a les 1068 Camio 48
+    Estibador 0 inicia Servei a 1042
+	FISERVEI ESTIBADOR programada per a les 1068 Camio 48
+1068 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 48( initCamio = 1042 endCamio = 0 )
+1068 Estibador 0 executa una FISERVEI ESTIBADOR Camio 48( initCamio = 1042 endCamio = 1068 )
+1080 Generador executa una ARRIBADA AL MAINGATE Camio 49( initCamio = 1080 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1121 Camio 50
+    Maingate 0 inicia Servei a 1080
+	FISERVEI DEL MAINGATE programada per a les 1080 Camio 49
+	ARRIBADA AL PARKING programada per a les 1080 Camio 49
+1080 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 49( initCamio = 1080 endCamio = 0 )
+1080 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 49( initCamio = 1080 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1080
+	FISERVEI DEL PARKING programada per a les 1106 Camio 49
+    Estibador 0 inicia Servei a 1080
+	FISERVEI ESTIBADOR programada per a les 1106 Camio 49
+1106 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 49( initCamio = 1080 endCamio = 0 )
+1106 Estibador 0 executa una FISERVEI ESTIBADOR Camio 49( initCamio = 1080 endCamio = 1106 )
+1121 Generador executa una ARRIBADA AL MAINGATE Camio 50( initCamio = 1121 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1163 Camio 51
+    Maingate 0 inicia Servei a 1121
+	FISERVEI DEL MAINGATE programada per a les 1121 Camio 50
+	ARRIBADA AL PARKING programada per a les 1121 Camio 50
+1121 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 50( initCamio = 1121 endCamio = 0 )
+1121 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 50( initCamio = 1121 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1121
+	FISERVEI DEL PARKING programada per a les 1147 Camio 50
+    Estibador 0 inicia Servei a 1121
+	FISERVEI ESTIBADOR programada per a les 1147 Camio 50
+1147 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 50( initCamio = 1121 endCamio = 0 )
+1147 Estibador 0 executa una FISERVEI ESTIBADOR Camio 50( initCamio = 1121 endCamio = 1147 )
+1163 Generador executa una ARRIBADA AL MAINGATE Camio 51( initCamio = 1163 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1205 Camio 52
+    Maingate 0 inicia Servei a 1163
+	FISERVEI DEL MAINGATE programada per a les 1163 Camio 51
+	ARRIBADA AL PARKING programada per a les 1163 Camio 51
+1163 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 51( initCamio = 1163 endCamio = 0 )
+1163 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 51( initCamio = 1163 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1163
+	FISERVEI DEL PARKING programada per a les 1189 Camio 51
+    Estibador 0 inicia Servei a 1163
+	FISERVEI ESTIBADOR programada per a les 1189 Camio 51
+1189 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 51( initCamio = 1163 endCamio = 0 )
+1189 Estibador 0 executa una FISERVEI ESTIBADOR Camio 51( initCamio = 1163 endCamio = 1189 )
+1205 Generador executa una ARRIBADA AL MAINGATE Camio 52( initCamio = 1205 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1247 Camio 53
+    Maingate 0 inicia Servei a 1205
+	FISERVEI DEL MAINGATE programada per a les 1205 Camio 52
+	ARRIBADA AL PARKING programada per a les 1205 Camio 52
+1205 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 52( initCamio = 1205 endCamio = 0 )
+1205 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 52( initCamio = 1205 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1205
+	FISERVEI DEL PARKING programada per a les 1231 Camio 52
+    Estibador 0 inicia Servei a 1205
+	FISERVEI ESTIBADOR programada per a les 1231 Camio 52
+1231 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 52( initCamio = 1205 endCamio = 0 )
+1231 Estibador 0 executa una FISERVEI ESTIBADOR Camio 52( initCamio = 1205 endCamio = 1231 )
+1247 Generador executa una ARRIBADA AL MAINGATE Camio 53( initCamio = 1247 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1296 Camio 54
+    Maingate 0 inicia Servei a 1247
+	FISERVEI DEL MAINGATE programada per a les 1247 Camio 53
+	ARRIBADA AL PARKING programada per a les 1247 Camio 53
+1247 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 53( initCamio = 1247 endCamio = 0 )
+1247 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 53( initCamio = 1247 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1247
+	FISERVEI DEL PARKING programada per a les 1273 Camio 53
+    Estibador 0 inicia Servei a 1247
+	FISERVEI ESTIBADOR programada per a les 1273 Camio 53
+1273 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 53( initCamio = 1247 endCamio = 0 )
+1273 Estibador 0 executa una FISERVEI ESTIBADOR Camio 53( initCamio = 1247 endCamio = 1273 )
+1296 Generador executa una ARRIBADA AL MAINGATE Camio 54( initCamio = 1296 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1347 Camio 55
+    Maingate 0 inicia Servei a 1296
+	FISERVEI DEL MAINGATE programada per a les 1296 Camio 54
+	ARRIBADA AL PARKING programada per a les 1296 Camio 54
+1296 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 54( initCamio = 1296 endCamio = 0 )
+1296 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 54( initCamio = 1296 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1296
+	FISERVEI DEL PARKING programada per a les 1322 Camio 54
+    Estibador 0 inicia Servei a 1296
+	FISERVEI ESTIBADOR programada per a les 1322 Camio 54
+1322 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 54( initCamio = 1296 endCamio = 0 )
+1322 Estibador 0 executa una FISERVEI ESTIBADOR Camio 54( initCamio = 1296 endCamio = 1322 )
+1347 Generador executa una ARRIBADA AL MAINGATE Camio 55( initCamio = 1347 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1398 Camio 56
+    Maingate 0 inicia Servei a 1347
+	FISERVEI DEL MAINGATE programada per a les 1347 Camio 55
+	ARRIBADA AL PARKING programada per a les 1347 Camio 55
+1347 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 55( initCamio = 1347 endCamio = 0 )
+1347 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 55( initCamio = 1347 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1347
+	FISERVEI DEL PARKING programada per a les 1373 Camio 55
+    Estibador 0 inicia Servei a 1347
+	FISERVEI ESTIBADOR programada per a les 1373 Camio 55
+1373 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 55( initCamio = 1347 endCamio = 0 )
+1373 Estibador 0 executa una FISERVEI ESTIBADOR Camio 55( initCamio = 1347 endCamio = 1373 )
+1398 Generador executa una ARRIBADA AL MAINGATE Camio 56( initCamio = 1398 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1449 Camio 57
+    Maingate 0 inicia Servei a 1398
+	FISERVEI DEL MAINGATE programada per a les 1398 Camio 56
+	ARRIBADA AL PARKING programada per a les 1398 Camio 56
+1398 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 56( initCamio = 1398 endCamio = 0 )
+1398 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 56( initCamio = 1398 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1398
+	FISERVEI DEL PARKING programada per a les 1424 Camio 56
+    Estibador 0 inicia Servei a 1398
+	FISERVEI ESTIBADOR programada per a les 1424 Camio 56
+1424 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 56( initCamio = 1398 endCamio = 0 )
+1424 Estibador 0 executa una FISERVEI ESTIBADOR Camio 56( initCamio = 1398 endCamio = 1424 )
+1449 Generador executa una ARRIBADA AL MAINGATE Camio 57( initCamio = 1449 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1501 Camio 58
+    Maingate 0 inicia Servei a 1449
+	FISERVEI DEL MAINGATE programada per a les 1449 Camio 57
+	ARRIBADA AL PARKING programada per a les 1449 Camio 57
+1449 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 57( initCamio = 1449 endCamio = 0 )
+1449 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 57( initCamio = 1449 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1449
+	FISERVEI DEL PARKING programada per a les 1475 Camio 57
+    Estibador 0 inicia Servei a 1449
+	FISERVEI ESTIBADOR programada per a les 1475 Camio 57
+1475 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 57( initCamio = 1449 endCamio = 0 )
+1475 Estibador 0 executa una FISERVEI ESTIBADOR Camio 57( initCamio = 1449 endCamio = 1475 )
+1501 Generador executa una ARRIBADA AL MAINGATE Camio 58( initCamio = 1501 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1553 Camio 59
+    Maingate 0 inicia Servei a 1501
+	FISERVEI DEL MAINGATE programada per a les 1501 Camio 58
+	ARRIBADA AL PARKING programada per a les 1501 Camio 58
+1501 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 58( initCamio = 1501 endCamio = 0 )
+1501 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 58( initCamio = 1501 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1501
+	FISERVEI DEL PARKING programada per a les 1527 Camio 58
+    Estibador 0 inicia Servei a 1501
+	FISERVEI ESTIBADOR programada per a les 1527 Camio 58
+1527 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 58( initCamio = 1501 endCamio = 0 )
+1527 Estibador 0 executa una FISERVEI ESTIBADOR Camio 58( initCamio = 1501 endCamio = 1527 )
+1553 Generador executa una ARRIBADA AL MAINGATE Camio 59( initCamio = 1553 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1605 Camio 60
+    Maingate 0 inicia Servei a 1553
+	FISERVEI DEL MAINGATE programada per a les 1553 Camio 59
+	ARRIBADA AL PARKING programada per a les 1553 Camio 59
+1553 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 59( initCamio = 1553 endCamio = 0 )
+1553 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 59( initCamio = 1553 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1553
+	FISERVEI DEL PARKING programada per a les 1579 Camio 59
+    Estibador 0 inicia Servei a 1553
+	FISERVEI ESTIBADOR programada per a les 1579 Camio 59
+1579 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 59( initCamio = 1553 endCamio = 0 )
+1579 Estibador 0 executa una FISERVEI ESTIBADOR Camio 59( initCamio = 1553 endCamio = 1579 )
+1605 Generador executa una ARRIBADA AL MAINGATE Camio 60( initCamio = 1605 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1657 Camio 61
+    Maingate 0 inicia Servei a 1605
+	FISERVEI DEL MAINGATE programada per a les 1605 Camio 60
+	ARRIBADA AL PARKING programada per a les 1605 Camio 60
+1605 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 60( initCamio = 1605 endCamio = 0 )
+1605 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 60( initCamio = 1605 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1605
+	FISERVEI DEL PARKING programada per a les 1631 Camio 60
+    Estibador 0 inicia Servei a 1605
+	FISERVEI ESTIBADOR programada per a les 1631 Camio 60
+1631 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 60( initCamio = 1605 endCamio = 0 )
+1631 Estibador 0 executa una FISERVEI ESTIBADOR Camio 60( initCamio = 1605 endCamio = 1631 )
+1657 Generador executa una ARRIBADA AL MAINGATE Camio 61( initCamio = 1657 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1710 Camio 62
+    Maingate 0 inicia Servei a 1657
+	FISERVEI DEL MAINGATE programada per a les 1657 Camio 61
+	ARRIBADA AL PARKING programada per a les 1657 Camio 61
+1657 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 61( initCamio = 1657 endCamio = 0 )
+1657 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 61( initCamio = 1657 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1657
+	FISERVEI DEL PARKING programada per a les 1683 Camio 61
+    Estibador 0 inicia Servei a 1657
+	FISERVEI ESTIBADOR programada per a les 1683 Camio 61
+1683 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 61( initCamio = 1657 endCamio = 0 )
+1683 Estibador 0 executa una FISERVEI ESTIBADOR Camio 61( initCamio = 1657 endCamio = 1683 )
+1710 Generador executa una ARRIBADA AL MAINGATE Camio 62( initCamio = 1710 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1764 Camio 63
+    Maingate 0 inicia Servei a 1710
+	FISERVEI DEL MAINGATE programada per a les 1710 Camio 62
+	ARRIBADA AL PARKING programada per a les 1710 Camio 62
+1710 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 62( initCamio = 1710 endCamio = 0 )
+1710 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 62( initCamio = 1710 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1710
+	FISERVEI DEL PARKING programada per a les 1736 Camio 62
+    Estibador 0 inicia Servei a 1710
+	FISERVEI ESTIBADOR programada per a les 1736 Camio 62
+1736 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 62( initCamio = 1710 endCamio = 0 )
+1736 Estibador 0 executa una FISERVEI ESTIBADOR Camio 62( initCamio = 1710 endCamio = 1736 )
+1764 Generador executa una ARRIBADA AL MAINGATE Camio 63( initCamio = 1764 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1819 Camio 64
+    Maingate 0 inicia Servei a 1764
+	FISERVEI DEL MAINGATE programada per a les 1764 Camio 63
+	ARRIBADA AL PARKING programada per a les 1764 Camio 63
+1764 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 63( initCamio = 1764 endCamio = 0 )
+1764 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 63( initCamio = 1764 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1764
+	FISERVEI DEL PARKING programada per a les 1790 Camio 63
+    Estibador 0 inicia Servei a 1764
+	FISERVEI ESTIBADOR programada per a les 1790 Camio 63
+1790 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 63( initCamio = 1764 endCamio = 0 )
+1790 Estibador 0 executa una FISERVEI ESTIBADOR Camio 63( initCamio = 1764 endCamio = 1790 )
+1819 Generador executa una ARRIBADA AL MAINGATE Camio 64( initCamio = 1819 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1874 Camio 65
+    Maingate 0 inicia Servei a 1819
+	FISERVEI DEL MAINGATE programada per a les 1819 Camio 64
+	ARRIBADA AL PARKING programada per a les 1819 Camio 64
+1819 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 64( initCamio = 1819 endCamio = 0 )
+1819 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 64( initCamio = 1819 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1819
+	FISERVEI DEL PARKING programada per a les 1845 Camio 64
+    Estibador 0 inicia Servei a 1819
+	FISERVEI ESTIBADOR programada per a les 1845 Camio 64
+1845 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 64( initCamio = 1819 endCamio = 0 )
+1845 Estibador 0 executa una FISERVEI ESTIBADOR Camio 64( initCamio = 1819 endCamio = 1845 )
+1874 Generador executa una ARRIBADA AL MAINGATE Camio 65( initCamio = 1874 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1931 Camio 66
+    Maingate 0 inicia Servei a 1874
+	FISERVEI DEL MAINGATE programada per a les 1874 Camio 65
+	ARRIBADA AL PARKING programada per a les 1874 Camio 65
+1874 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 65( initCamio = 1874 endCamio = 0 )
+1874 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 65( initCamio = 1874 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1874
+	FISERVEI DEL PARKING programada per a les 1900 Camio 65
+    Estibador 0 inicia Servei a 1874
+	FISERVEI ESTIBADOR programada per a les 1900 Camio 65
+1900 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 65( initCamio = 1874 endCamio = 0 )
+1900 Estibador 0 executa una FISERVEI ESTIBADOR Camio 65( initCamio = 1874 endCamio = 1900 )
+1931 Generador executa una ARRIBADA AL MAINGATE Camio 66( initCamio = 1931 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 1989 Camio 67
+    Maingate 0 inicia Servei a 1931
+	FISERVEI DEL MAINGATE programada per a les 1931 Camio 66
+	ARRIBADA AL PARKING programada per a les 1931 Camio 66
+1931 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 66( initCamio = 1931 endCamio = 0 )
+1931 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 66( initCamio = 1931 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1931
+	FISERVEI DEL PARKING programada per a les 1957 Camio 66
+    Estibador 0 inicia Servei a 1931
+	FISERVEI ESTIBADOR programada per a les 1957 Camio 66
+1957 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 66( initCamio = 1931 endCamio = 0 )
+1957 Estibador 0 executa una FISERVEI ESTIBADOR Camio 66( initCamio = 1931 endCamio = 1957 )
+1989 Generador executa una ARRIBADA AL MAINGATE Camio 67( initCamio = 1989 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 2047 Camio 68
+    Maingate 0 inicia Servei a 1989
+	FISERVEI DEL MAINGATE programada per a les 1989 Camio 67
+	ARRIBADA AL PARKING programada per a les 1989 Camio 67
+1989 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 67( initCamio = 1989 endCamio = 0 )
+1989 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 67( initCamio = 1989 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 1989
+	FISERVEI DEL PARKING programada per a les 2015 Camio 67
+    Estibador 0 inicia Servei a 1989
+	FISERVEI ESTIBADOR programada per a les 2015 Camio 67
+2015 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 67( initCamio = 1989 endCamio = 0 )
+2015 Estibador 0 executa una FISERVEI ESTIBADOR Camio 67( initCamio = 1989 endCamio = 2015 )
+2047 Generador executa una ARRIBADA AL MAINGATE Camio 68( initCamio = 2047 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 2105 Camio 69
+    Maingate 0 inicia Servei a 2047
+	FISERVEI DEL MAINGATE programada per a les 2047 Camio 68
+	ARRIBADA AL PARKING programada per a les 2047 Camio 68
+2047 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 68( initCamio = 2047 endCamio = 0 )
+2047 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 68( initCamio = 2047 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 2047
+	FISERVEI DEL PARKING programada per a les 2073 Camio 68
+    Estibador 0 inicia Servei a 2047
+	FISERVEI ESTIBADOR programada per a les 2073 Camio 68
+2073 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 68( initCamio = 2047 endCamio = 0 )
+2073 Estibador 0 executa una FISERVEI ESTIBADOR Camio 68( initCamio = 2047 endCamio = 2073 )
+2105 Generador executa una ARRIBADA AL MAINGATE Camio 69( initCamio = 2105 endCamio = 0 )
+	ARRIBADA AL MAINGATE programada per a les 2164 Camio 70
+    Maingate 0 inicia Servei a 2105
+	FISERVEI DEL MAINGATE programada per a les 2105 Camio 69
+	ARRIBADA AL PARKING programada per a les 2105 Camio 69
+2105 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 69( initCamio = 2105 endCamio = 0 )
+2105 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 69( initCamio = 2105 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 2105
+	FISERVEI DEL PARKING programada per a les 2131 Camio 69
+    Estibador 0 inicia Servei a 2105
+	FISERVEI ESTIBADOR programada per a les 2131 Camio 69
+2131 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 69( initCamio = 2105 endCamio = 0 )
+2131 Estibador 0 executa una FISERVEI ESTIBADOR Camio 69( initCamio = 2105 endCamio = 2131 )
+2164 Generador executa una ARRIBADA AL MAINGATE Camio 70( initCamio = 2164 endCamio = 0 )
+    Maingate 0 inicia Servei a 2164
+	FISERVEI DEL MAINGATE programada per a les 2164 Camio 70
+	ARRIBADA AL PARKING programada per a les 2164 Camio 70
+2164 Maingate 0 executa una FISERVEI DEL MAINGATE Camio 70( initCamio = 2164 endCamio = 0 )
+2164 Posicio del parking 0 executa una ARRIBADA AL PARKING Camio 70( initCamio = 2164 endCamio = 0 )
+    Posicio del parking 0 inicia Servei a 2164
+	FISERVEI DEL PARKING programada per a les 2190 Camio 70
+    Estibador 0 inicia Servei a 2164
+	FISERVEI ESTIBADOR programada per a les 2190 Camio 70
+2190 Posicio del parking 0 executa una FISERVEI DEL PARKING Camio 70( initCamio = 2164 endCamio = 0 )
+2190 Estibador 0 executa una FISERVEI ESTIBADOR Camio 70( initCamio = 2164 endCamio = 2190 )

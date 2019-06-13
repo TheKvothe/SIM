@@ -95,8 +95,11 @@ class Motor:
         while len(self.esdevenimentsPendents) and continuar:
             esdeveniment = self.esdevenimentsPendents.pop(0)
             continuar = self.tractarEsdeveniment(esdeveniment)
+
+        f = open('result.txt', 'w')
         for i in range(0, len(self.traza)):
-            print(self.traza[i])
+            #print(self.traza[i],file = f) python 3!
+            print >> f, self.traza[i]
 
 
     def tractarEsdeveniment(self, esdeveniment):

@@ -9,18 +9,21 @@ def main(args):
 if __name__ == '__main__':
 	import sys
 
-	print("Que vols executar?")
-	print("	1. Traca")
-	print("	2. Tests")
-	mode = int(input('Mode( 1 o 2 ): '))
-	if mode == 1:
-		motor = Motor(8,100,20)
-		motor.run()
-		print(motor.esdevenimentsProcessats)
+	print(bcolors.UNDERLINE+"Que vols executar?"+bcolors.ENDC)
+	print(bcolors.HEADER+ "	1. Traca" +bcolors.ENDC)
+	print(bcolors.WARNING + "	2. Tests" + bcolors.ENDC)
+	print(bcolors.FAIL+"	3. Exit" + bcolors.ENDC)
+	mode = int(input(bcolors.BOLD+'Mode(1, 2 o 3): '+bcolors.ENDC))
+	while mode != 3:
+		if mode == 1:
+			motor = Motor(8,100,20)
+			motor.run()
+			print(motor.esdevenimentsProcessats)
 
-	elif mode == 2:
-		Testing()
-
-
-	# Probar que los estados sean correctos, BUSY, IDLE (main, parking,estibador) con los iniciservei
-	# o cuando no tienen nada (unitario)
+		elif mode == 2:
+			Testing()
+		print(bcolors.UNDERLINE + "Que vols executar?" + bcolors.ENDC)
+		print(bcolors.HEADER + "	1. Traca" + bcolors.ENDC)
+		print(bcolors.WARNING + "	2. Tests" + bcolors.ENDC)
+		print(bcolors.FAIL + "	3. Exit" + bcolors.ENDC)
+		mode = int(input(bcolors.BOLD + 'Mode(1, 2 o 3): ' + bcolors.ENDC))
