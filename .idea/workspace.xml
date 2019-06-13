@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18f4ceb7-42f1-473f-ad97-50241d9411d3" name="Default Changelist" comment="commit motor con el parking funcionando preliminar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelConversor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelConversor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExcelConversor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+            <state relative-caret-position="-720">
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -47,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/motor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+            <state relative-caret-position="194">
+              <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -62,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/result.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-329490">
-              <caret line="3255" selection-start-line="3255" selection-end-line="3255" />
+            <state relative-caret-position="-328485">
+              <caret line="3226" selection-start-line="3226" selection-end-line="3226" />
             </state>
           </provider>
         </entry>
@@ -179,8 +177,8 @@
         <option value="$PROJECT_DIR$/Source.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Esdeveniments.py" />
-        <option value="$PROJECT_DIR$/ExcelConversor.py" />
         <option value="$PROJECT_DIR$/motor.py" />
+        <option value="$PROJECT_DIR$/ExcelConversor.py" />
       </list>
     </option>
   </component>
@@ -380,7 +378,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2344371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -521,8 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/result.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329490">
-          <caret line="3255" selection-start-line="3255" selection-end-line="3255" />
+        <state relative-caret-position="-328485">
+          <caret line="3226" selection-start-line="3226" selection-end-line="3226" />
         </state>
       </provider>
     </entry>
@@ -536,22 +533,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelConversor.py">
+    <entry file="file://$PROJECT_DIR$/motor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+        <state relative-caret-position="194">
+          <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/motor.py">
+    <entry file="file://$PROJECT_DIR$/ExcelConversor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+        <state relative-caret-position="-720">
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

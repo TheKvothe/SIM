@@ -40,7 +40,10 @@ class ExcelConversor:
         else:
             self.traza['numberMainGate'].append(numberMaingate)
         self.traza['initCamio'].append(initCamio)
-        self.traza['endCamio'].append(endCamio)
+        if endCamio == 0:
+            self.traza['endCamio'].append("-")
+        else:
+            self.traza['endCamio'].append(endCamio)
         self.traza['eventScheduled'].append(eventScheduled)
         self.traza['eventTime'].append(eventTime)
         #constants
@@ -54,7 +57,10 @@ class ExcelConversor:
         self.traza['numberCamio'].append(numberCamio)
         self.traza['numberParking'].append(numberParking)
         self.traza['initCamio'].append(initCamio)
-        self.traza['endCamio'].append(endCamio)
+        if endCamio == 0:
+            self.traza['endCamio'].append("-")
+        else:
+            self.traza['endCamio'].append(endCamio)
         self.traza['eventScheduled'].append(eventScheduled)
         self.traza['eventTime'].append(eventTime)
         # constants
@@ -68,7 +74,10 @@ class ExcelConversor:
         self.traza['numberCamio'].append(numberCamio)
         self.traza['numberEstibador'].append(numberEstibador)
         self.traza['initCamio'].append(initCamio)
-        self.traza['endCamio'].append(endCamio)
+        if endCamio == 0:
+            self.traza['endCamio'].append("-")
+        else:
+            self.traza['endCamio'].append(endCamio)
         self.traza['eventScheduled'].append(eventScheduled)
         self.traza['eventTime'].append(eventTime)
         # constants
