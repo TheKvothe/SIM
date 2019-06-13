@@ -13,7 +13,7 @@ class Grafica:
                 dades.append(dadesAux2[i]-dadesAux[i])
         plt.interactive(False)
         fig1, ax1 = plt.subplots()
-        ax1.set_title('Temps estada camions en la terminal')
+        ax1.set_title('Temps estada camions en la terminal (minuts)')
         ax1.boxplot(dades)
         for i in range(len(dades)):
             y = dades[i]

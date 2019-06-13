@@ -8,6 +8,7 @@ from ExcelConversor import ExcelConversor
 from Grafica import Grafica
 
 import constants
+import numpy as np
 
 
 class Motor:
@@ -109,7 +110,7 @@ class Motor:
             #print >> f, self.traza[i]
 
         #Excel
-        #self.conversor.export()
+        self.conversor.export()
 
         #Graficas camiones
         Grafica.showPlot(Grafica(), self.conversor.traza)
@@ -269,4 +270,14 @@ class Motor:
         self.esdevenimentsPendents.sort()
         return True
 
+    def assignarTipusOperacio(self):
 
+        auxRandom = np.random.random_integers(1, 4)
+        if (auxRandom == 4):
+            return 2
+        else:
+            auxRandom2 = np.random.random_integers(1,2)
+            if auxRandom2 == 1:
+                return 0
+            else:
+                return 1
