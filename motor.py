@@ -226,7 +226,7 @@ class Motor:
 
                     self.traza.append(self.Estibadors[i].iniciServei(self.currentTime))
                     self.traza_gui.append(self.Estibadors[i].iniciServei_gui(self.currentTime))
-                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, self.Estibadors[i], esdeveniment.camio)
+                    esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, self.Estibadors[i], esdeveniment.camio, self.conversor)
                     self.esdevenimentsPendents.append(esd2)
                     self.traza.append(esd2.programat())
                     break
@@ -250,8 +250,8 @@ class Motor:
                 self.traza.append(esd2.programat())
 
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
-                self.traza_gui.append(esdeveniment.element.iniciServei(self.currentTime))
-                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, esdeveniment.element, CamioEsd)
+                self.traza_gui.append(esdeveniment.element.iniciServei_gui(self.currentTime))
+                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_ESTIBADOR, esdeveniment.element, CamioEsd, self.conversor)
                 self.esdevenimentsPendents.append(esd2)
                 self.traza.append(esd2.programat())
 

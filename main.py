@@ -1,5 +1,5 @@
 from motor import Motor
-
+from testing import Testing, bcolors
 
 def main(args):
 	return 0

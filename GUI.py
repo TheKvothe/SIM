@@ -1,8 +1,6 @@
 from Canvas import Canvas
 import tkinter
 
-
-
 class GUI:
     def __init__(self):
         self.canvs = None

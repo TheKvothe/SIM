@@ -101,8 +101,10 @@ class Canvas(tkinter.Tk):
     def setTraza (self, traza):
         self.traza = traza
         for i in range(len(self.traza)):
+            print(i)
             st = self.traza[i]
             aux = st.split(",")
+            print(str(aux))
             self.traza_who.append(aux[0])
             self.traza_time.append(aux[1])
             self.traza_what.append(aux[2])
