@@ -160,6 +160,8 @@ class Motor:
                 self.traza.append(esdeveniment.encuar("Cua de Maingate", self.cuaMainGate))
 
         elif esdeveniment.tipus == constants.EV_ENDSERVICE_MAINGATE:
+            if self.cuaParking > 0:
+                self.cuaParking -= 1
             esdeveniment.element.Free()
             if self.cuaMainGate > 0:
                 self.cuaMainGate -= 1
