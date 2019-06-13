@@ -107,6 +107,7 @@ class Motor:
             print(self.traza[i],file = f)
             #python2
             #print >> f, self.traza[i]
+        self.conversor.export()
 
 
     def tractarEsdeveniment(self, esdeveniment):
