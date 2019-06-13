@@ -100,8 +100,13 @@ class Motor:
         while len(self.esdevenimentsPendents) and continuar:
             esdeveniment = self.esdevenimentsPendents.pop(0)
             continuar = self.tractarEsdeveniment(esdeveniment)
+
+        f = open('result.txt', 'w')
         for i in range(0, len(self.traza)):
-            print(self.traza[i])
+            #python3
+            print(self.traza[i],file = f)
+            #python2
+            #print >> f, self.traza[i]
 
 
     def tractarEsdeveniment(self, esdeveniment):
@@ -167,12 +172,12 @@ class Motor:
                         foundParking = True
                         nextTime = self.Parking[x].nextEndService()
                         nextTime += self.currentTime
-                        esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element,CamioEsd)
+                        esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, esdeveniment.element,CamioEsd, self.conversor)
                         self.esdevenimentsPendents.append(esd1)
                         self.traza.append(esd1.programat())
 
 
-                        esd2 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, self.Parking[x], CamioEsd)
+                        esd2 = Esdeveniment(self.currentTime, constants.EV_ARRIVAL_PARKING, self.Parking[x], CamioEsd, self.conversor)
                         self.esdevenimentsPendents.append(esd2)
                         self.traza.append(esd2.programat())
                         break
@@ -223,7 +228,7 @@ class Motor:
 
                 nextTime = esdeveniment.element.nextEndService(CamioEsd.TipusOp)
                 nextTime += self.currentTime
-                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, elemento, CamioEsd)
+                esd2 = Esdeveniment(nextTime, constants.EV_ENDSERVICE_PARKING, elemento, CamioEsd, self.conversor)
                 self.esdevenimentsPendents.append(esd2)
                 self.traza.append(esd2.programat())
 
