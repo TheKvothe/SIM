@@ -71,5 +71,6 @@ class ExcelConversor:
     def export(self):
         auxExport = pand.DataFrame(self.traza, columns=['time', 'event', 'numberCamio', 'numberMainGate', 'numberParking', 'numberEstibador', 'initCamio', 'endCamio', 'eventScheduled', 'eventTime'])
         dirname = os.path.dirname(__file__)
-        filename = os.path.join(dirname, '/TrazaAExcel')
+        filename = os.path.join(dirname, 'TrazaAExcel.xls')
+        print (filename)
         auxExport.to_excel(filename)
