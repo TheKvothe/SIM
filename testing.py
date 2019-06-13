@@ -216,7 +216,7 @@ class Testing:
         motor.tractarEsdeveniment(esd4)
 
         assert motor.Estibadors[0].libre == constants.BUSY, self.errorbusy
-        assert motor.Estibadors[1].libre == constants.BUSY, self.erroridle
+        assert motor.Estibadors[1].libre == constants.BUSY, self.errorbusy
 
         esd2 = Esdeveniment(0, constants.EV_ENDSERVICE_ESTIBADOR, motor.Estibadors[0], camio1,self.conversor)
         motor.tractarEsdeveniment(esd2)

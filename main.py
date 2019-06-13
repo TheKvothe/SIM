@@ -15,7 +15,7 @@ if __name__ == '__main__':
 	mode = int(input(bcolors.BOLD+'Mode(1, 2 o 3): '+bcolors.ENDC))
 	while mode != 3:
 		if mode == 1:
-			motor = Motor(8,100,20)
+			motor = Motor(8,100,100)
 			motor.run()
 			print(motor.esdevenimentsProcessats)
 

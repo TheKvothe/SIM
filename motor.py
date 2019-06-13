@@ -8,6 +8,7 @@ from ExcelConversor import ExcelConversor
 from Grafica import Grafica
 from GUI import GUI
 import constants
+import numpy as np
 
 
 class Motor:
@@ -90,8 +91,8 @@ class Motor:
     def inicialitzarLlistaEsdeveniments(self):
         self.camio_num +=1
         time = self.generador.nextArrival()
-
-        camio = Camio(constants.RECO_DESC, self.camio_num,time)
+        tipOp = self.assignarTipusOperacio()
+        camio = Camio(tipOp, self.camio_num,time)
         esd = Esdeveniment(time, constants.EV_ARRIVAL_MAINGATE, self.generador, camio, self.conversor)
 
         self.esdevenimentsPendents.append(esd)
@@ -126,7 +127,8 @@ class Motor:
 
                 nextTime += self.currentTime
                 self.camio_num += 1
-                camio = Camio(constants.RECO_DESC, self.camio_num, nextTime)
+                tipOp = self.assignarTipusOperacio()
+                camio = Camio(tipOp, self.camio_num, nextTime)
                 esd = Esdeveniment(nextTime, constants.EV_ARRIVAL_MAINGATE, self.generador, camio, self.conversor)
                 self.esdevenimentsPendents.append(esd)
                 self.traza.append(esd.programat())
@@ -211,7 +213,6 @@ class Motor:
         elif esdeveniment.tipus == constants.EV_ARRIVAL_PARKING:
 
 
-            # cuando llega alguien al parking habra que programar el evento de final de uso del parking
             foundEstibador = False
             self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
             self.traza_gui.append(esdeveniment.element.iniciServei_gui(self.currentTime))
@@ -278,3 +279,11 @@ class Motor:
 
         self.esdevenimentsPendents.sort()
         return True
+
+    def assignarTipusOperacio(self):
+
+        auxRandom = np.random.random_integers(1, 4)
+        if (auxRandom == 4):
+            return 2
+        else:
+            return np.random.random_integers(0,1)
