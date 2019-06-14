@@ -179,7 +179,6 @@ class Motor:
                 self.cuaParking -= 1
             esdeveniment.element.Free()
 
-           # print("estoy en el endservice del maingate, el nombre del elemento es " + esdeveniment.element.name())
             if self.cuaMainGate > 0:
                 self.cuaMainGate -= 1
                 self.traza.append(esdeveniment.element.iniciServei(self.currentTime))
@@ -242,8 +241,6 @@ class Motor:
 
             esdeveniment.element.Free()
             if len(self.cuaEstibadorsParking) > 0:
-
-
                 elemento = self.cuaEstibadorsParking.pop(0)
                 CamioEsd = self.CEPCamions.pop(0)
                 nextTime = esdeveniment.element.nextEndService(CamioEsd.TipusOp)
@@ -271,7 +268,6 @@ class Motor:
                 esd1 = Esdeveniment(self.currentTime, constants.EV_ENDSERVICE_MAINGATE, elemento, CamioEsd, self.conversor)
                 self.esdevenimentsPendents.append(esd1)
                 self.traza.append(esd1.programat())
-
                 nextTime = esdeveniment.element.nextEndService()
                 nextTime += self.currentTime
 

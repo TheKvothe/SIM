@@ -104,10 +104,8 @@ class Canvas(tkinter.Tk):
     def setTraza (self, traza):
         self.traza = traza
         for i in range(len(self.traza)):
-            print(i)
             st = self.traza[i]
             aux = st.split(",")
-            print(str(aux))
             self.traza_who.append(aux[0])
             self.traza_time.append(aux[1])
             self.traza_what.append(aux[2])
@@ -151,9 +149,10 @@ class Canvas(tkinter.Tk):
                             item_id = self.parking[row,col]
                             self.canvas.itemconfig(item_id, fill="red")
                     else:
-                        # cas FISERVE
+                        print(self.traza_where[self.iterator])
                         if self.traza_where[self.iterator] == "MAINGATE":
-                            pos = self.traza_who[self.iterator][len(self.traza_who[self.iterator]) - 1]
+                            aux = self.traza_who[self.iterator].split(" ")
+                            pos = int(aux[1])
                             item_id = self.maingate[int(pos), 0]
                             self.canvas.itemconfig(item_id, fill="blue")
                         elif self.traza_where[self.iterator] == "PARKING":
@@ -166,7 +165,6 @@ class Canvas(tkinter.Tk):
                             item_id = self.parking[row,col]
                             self.canvas.itemconfig(item_id, fill="green")
                         else:
-                            print(self.traza[self.iterator])
                             aux = self.traza_who[self.iterator].split(" ")
                             row = 0
                             col = int(aux[1])
@@ -180,6 +178,8 @@ class Canvas(tkinter.Tk):
                         self.cua = self.traza_oper[self.iterator]
                         item_id = self.queue
                         self.canvas.itemconfig(item_id, text=self.cua)
+                    else:
+                        print(self.traza[self.iterator])
                 else:  # INICI SERVEI ESTIBADOR I MAINGATE
                     if self.traza_who[self.iterator][0] == "M":
                         aux = self.traza_who[self.iterator].split(" ")
@@ -187,7 +187,6 @@ class Canvas(tkinter.Tk):
                         item_id = self.maingate[int(pos), 0]
                         self.canvas.itemconfig(item_id, fill="orange")
                     elif self.traza_who[self.iterator][0] == "E":
-                        print(self.traza[self.iterator])
                         aux = self.traza_who[self.iterator].split(" ")
                         row = 0
                         col = int(aux[1])

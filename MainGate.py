@@ -23,6 +23,9 @@ class MainGate:
     def Free(self):
         self.libre = constants.IDLE
 
+    def Free_gui(self, temps):
+        return ""+self.name()+","+str(temps)+",FISERVEI"
+
     def nextEndService(self):
         self.libre = constants.BUSY
         return self.nextTime
