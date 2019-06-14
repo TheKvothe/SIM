@@ -7,7 +7,7 @@ class Estibador:
     instancia = None
     nextTime = 10
     numGat = None
-    Time = [10, 5, 26]
+    Time = [27, 22, 39]
 
     def __init__(self, instancia):
         self.libre = True
