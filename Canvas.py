@@ -27,7 +27,7 @@ class Canvas(tkinter.Tk):
         self.cols_pkg = 25
         self.rows_maingate = 8
         self.cols_maingate = 1
-        self.rows_est = 2
+        self.rows_est = 4
         self.cols_est = 25
 
         self.cell_width = 20
