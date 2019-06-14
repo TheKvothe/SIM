@@ -105,6 +105,8 @@ class Motor:
             continuar = self.tractarEsdeveniment(esdeveniment)
 
         f = open('result.txt', 'w')
+        for i in range(0, len(self.traza)):
+            print(self.traza[i],file = f)
         #Excel
         self.conversor.export()
 
