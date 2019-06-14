@@ -58,14 +58,17 @@ class Canvas(tkinter.Tk):
         self.yini_queue = 220
         self.xfi_queue = self.xini_queue + 100
         self.yfi_queue = self.yini_queue + 40
+
+        self.setTerminal()
+
+    def setTerminal(self):
+        self.cua = 0
         self.canvas.create_rectangle(self.xini_queue, self.yini_queue, self.xfi_queue, self.yfi_queue, fill="white")
 
         self.canvas.create_text(self.xini_queue + 50, self.yini_queue - 10, text="CUA MAINGATE")
         self.queue = self.canvas.create_text(self.xini_queue + 50, self.yini_queue + 20, text=self.cua, font="Times 20")
         self.canvas.create_text(self.init_x_maingate + 30, self.init_y_maingate - 10, text="MAINGATE")
-        self.setTerminal()
 
-    def setTerminal(self):
         self.maingate = {}
         for col in range(self.cols_maingate):
             for row in range(self.rows_maingate):
@@ -198,4 +201,9 @@ class Canvas(tkinter.Tk):
                 if (self.delaySpeed == 1000):
                     sleep(0.01)
                 self.iterator += 1
+
+            if self.iterator == len(self.traza):
+                self.isPaused = True
+                self.setTerminal()
+
         self.canvas.after(self.delaySpeed, lambda :self.redraw(self.delaySpeed))
